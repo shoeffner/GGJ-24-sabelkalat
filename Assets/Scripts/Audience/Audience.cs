@@ -12,6 +12,7 @@ public class Audience : MonoBehaviour
     private void Awake()
     {
         audience = new List<Viewer>();
+        if (viewerTypePrefabs.Count == 0) return;
         // create viewers evenly per type
         int numberPerViewerType = numberOfViewers/viewerTypePrefabs.Count;
         int viewerTypeIndex = 0;
