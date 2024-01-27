@@ -187,6 +187,8 @@ MonoBehaviour:
   holdTarget: {fileID: 0}
   hiddenTarget: {fileID: 0}
   swapTarget: {fileID: 0}
+  positiveCategory: {fileID: 369189475304059593}
+  negativeCategory: {fileID: 795119571744614222}
   enableLog: 0
 --- !u!1 &4279897307767084308
 GameObject:
