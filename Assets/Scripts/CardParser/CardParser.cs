@@ -94,7 +94,6 @@ public class CardParser
     // How many times we try to regenerate the card if it already exists.
     private int CARD_ALREADY_EXIST_TRIES = 10;
 
-
     public void ReadFiles()
     {
         ReadNouns();
@@ -143,14 +142,25 @@ public class CardParser
     }
 
 
-    public List<SetupCard> GetRandomSetups(int count)
+    public List<SetupCard> GetRandomSetups(int count, List<Category> audienceCategories, List<Category> allCategories, int goodCards)
     {
         var setups = new List<SetupCard>();
         for (int i = 0; i < count; i++)
         {
             for (int j = 0; j < CARD_ALREADY_EXIST_TRIES; j++)
             {
-                var setup = GetRandomSetup();
+                Category category;
+                if (i < goodCards)
+                {
+                    //Debug.Log("Get a good card");
+                    category = GetRandomCategory(audienceCategories, true);
+                }
+                else
+                {
+                    //Debug.Log("Get a possibly bad card");
+                    category = GetRandomCategory(allCategories, true);
+                }
+                SetupCard setup = GetRandomSetup(category);
                 bool isSetupUnique = true;
                 foreach (var otherSetup in setups)
                 {
@@ -168,12 +178,31 @@ public class CardParser
             }
         }
         Debug.Log($"Generated {setups.Count} setups");
+        setups.Shuffle();
         return setups;
     }
 
-    public SetupCard GetRandomSetup()
+    private Category GetRandomCategory(List<Category> categories, bool isSetup)
     {
-        Noun noun = GetRandomNoun();
+        for (int i = 0; i < 100; i++)
+        {
+            var category = categories[Random.Range(0, categories.Count)];
+            if (category.isSetup == isSetup)
+            {
+                return category;
+            }
+        }
+        Debug.LogError($"Could not find category isSetup: {isSetup}");
+        foreach (var category in categories)
+        {
+            Debug.Log($"- {category.name} isSetup: {category.isSetup}");
+        }
+        return categories[0];
+    }
+
+    public SetupCard GetRandomSetup(Category category)
+    {
+        Noun noun = GetRandomNoun(category);
         SetupCard card = setupCards[Random.Range(0, setupCards.Count)];
         return new SetupCard
         {
@@ -183,9 +212,30 @@ public class CardParser
     }
 
     // TODO: GetRandomNoun for categories
-    private Noun GetRandomNoun()
+    private Noun GetRandomNoun(Category category)
+    {
+        if (!nouns.ContainsKey(category.name))
+        {
+            Debug.LogError($"No nouns defined for category {category}.");
+            return GetCompletelyRandomNoun();
+        }
+        return nouns[category.name][Random.Range(0, nouns[category.name].Count)];
+        //return allNouns[Random.Range(0, allNouns.Count)];
+    }
+
+    private Noun GetCompletelyRandomNoun()
     {
         return allNouns[Random.Range(0, allNouns.Count)];
+    }
+
+    private Noun GetRandomNounForCategory(string category)
+    {
+        if (!nouns.ContainsKey(category))
+        {
+            Debug.LogError($"No nouns defined for category {category}.");
+            return GetCompletelyRandomNoun();
+        }
+        return nouns[category][Random.Range(0, nouns[category].Count)];
     }
 
 
@@ -222,4 +272,5 @@ public class CardParser
     {
         return punchlineCards[Random.Range(0, punchlineCards.Count)];
     }
+
 }

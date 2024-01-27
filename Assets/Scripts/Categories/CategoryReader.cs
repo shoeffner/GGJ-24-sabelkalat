@@ -10,6 +10,7 @@ public class CategoryReader : MonoBehaviour
 
     public void OnValidate()
     {
+        categories = new List<Category>();
         LoadCategories(setupFileName, true);
         LoadCategories(punchlineFileName, false);
     }
@@ -22,7 +23,6 @@ public class CategoryReader : MonoBehaviour
             return;
         }
 
-        categories = new List<Category>();
         var path = $"Assets/Resources/{fileName}";
 
         //read text file, each line is a category
@@ -31,5 +31,19 @@ public class CategoryReader : MonoBehaviour
         {
             categories.Add(new Category(line, isSetup));
         }
+    }
+
+
+    public Category GetCategoryByName(string name)
+    {
+        foreach (var category in categories)
+        {
+            if (category.name == name)
+            {
+                return category;
+            }
+        }
+        Debug.LogError($"Could not find category for {name}!");
+        return categories[0];
     }
 }

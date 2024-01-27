@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Diagnostics.CodeAnalysis;
 using TMPro;
+using UnityEngine;
 
 public class CardParserTest : MonoBehaviour
 {
-
-    [Header("Input Data")]
-    //[Tooltip("Which categories the audience is currently requesting.")]
-    //public List<string> audienceCategories;
-    [Tooltip("Number of setup cards in hand.")]
-    public int setupCardsCount = 5;
-    [Tooltip("Number of punchline cards in hand.")]
-    public int punchlineCardCount = 5;
+    [Tooltip("Which categories the audience is currently requesting.")]
+    public List<string> audienceCategories;
+    [NotNull]
+    public CardDealer cardDealer;
 
     [Header("UI")]
 
@@ -25,108 +22,34 @@ public class CardParserTest : MonoBehaviour
     [NotNull]
     public TextMeshProUGUI punchlineCardCategoriesText;
 
-    private CardParser cardParser;
-
-    private List<CardParser.SetupCard> setupCards;
-    private List<CardParser.PunchlineCard> punchlineCards;
-
-    private int currentSetup = 0;
-    private int currentPunchline = 0;
-
-    public void Start()
+    void Start()
     {
-        Setup();
-        RegenerateCards();
+        cardDealer.SetupIfNotYet();
     }
-
-    private void Setup()
-    {
-        cardParser = new CardParser();
-        cardParser.ReadFiles();
-    }
-
-    // Test from editor
-    public void Test()
-    {
-        if (cardParser == null)
-        {
-            Start();
-        }
-        RegenerateCards();
-    }
-
 
     public void RegenerateCards()
     {
-        /*setupCards = new List<CardParser.SetupCard>();
-        for (int i = 0; i < setupCardsCount; i++)
+        List<Category> actualAudienceCategories = new List<Category>();
+        foreach (var category in audienceCategories)
         {
-            var setup = cardParser.GetRandomSetup();
-            setupCards.Add(setup);
-        }*/
-        setupCards = cardParser.GetRandomSetups(setupCardsCount);
-
-        /*punchlineCards = new List<CardParser.PunchlineCard>();
-        for (int i = 0; i < punchlineCardCount; i++)
-        {
-            var punchline = cardParser.GetRandomPunchline();
-            punchlineCards.Add(punchline);
-        }*/
-        punchlineCards = cardParser.GetRandomPunchlines(punchlineCardCount);
-
-        currentSetup = 0;
-        currentPunchline = 0;
-
-        DisplayCurrentCards();
+            actualAudienceCategories.Add(cardDealer.categoryReader.GetCategoryByName(category));
+        }
+        cardDealer.RegenerateCards(actualAudienceCategories);
     }
 
-    private void DisplayCurrentCards()
+    public void DisplayCards(CardParser.SetupCard setup, CardParser.PunchlineCard punchline)
     {
-        var setup = setupCards[currentSetup];
-        var punchline = punchlineCards[currentPunchline];
         setupCardText.text = CardPrinter.GetSetupText(setup);
         setupCardCategoriesText.text = $"+ {setup.noun.category}\n- {setup.counterCategory}";
         punchlineCardText.text = CardPrinter.GetPunchlineText(setup, punchline);
         punchlineCardCategoriesText.text = $"+ {punchline.category}\n- {punchline.counterCategory}";
     }
 
-    public void NextSetup()
+    // Test from editor
+    public void Test()
     {
-        currentSetup++;
-        if (currentSetup >= setupCards.Count)
-        {
-            currentSetup = 0;
-        }
-        DisplayCurrentCards();
+        cardDealer.SetupIfNotYet();
+        RegenerateCards();
     }
 
-    public void PreviousSetup()
-    {
-        currentSetup--;
-        if (currentSetup < 0)
-        {
-            currentSetup = setupCards.Count - 1;
-        }
-        DisplayCurrentCards();
-    }
-
-    public void NextPunchline()
-    {
-        currentPunchline++;
-        if (currentPunchline >= punchlineCards.Count)
-        {
-            currentPunchline = 0;
-        }
-        DisplayCurrentCards();
-    }
-
-    public void PreviousPunchline()
-    {
-        currentPunchline--;
-        if (currentPunchline < 0)
-        {
-            currentPunchline = punchlineCards.Count - 1;
-        }
-        DisplayCurrentCards();
-    }
 }

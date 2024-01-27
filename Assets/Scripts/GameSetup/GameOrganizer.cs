@@ -6,7 +6,7 @@ public class GameOrganizer : Singleton<GameOrganizer>
     public UnityAction OnGameOver;
 
     [SerializeField] private GameSetup gameSetup;
-    [SerializeField] private Audience audience;
+    [SerializeField] public Audience audience;
     private int currentScore = 0;
 
     private int currentRoundIndex = 0;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -341,8 +341,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
-        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+      - m_Target: {fileID: 1018274391}
+        m_TargetAssemblyTypeName: CardDealer, Assembly-CSharp
         m_MethodName: PreviousSetup
         m_Mode: 1
         m_Arguments:
@@ -400,7 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133543511}
-  - component: {fileID: 133543510}
+  - component: {fileID: 133543512}
   m_Layer: 0
   m_Name: CardParserTest
   m_TagString: Untagged
@@ -408,24 +408,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &133543510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133543509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ce5b24d682b9a341851bda2b07b1948, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setupCardsCount: 5
-  punchlineCardCount: 5
-  setupCardText: {fileID: 939048410}
-  setupCardCategoriesText: {fileID: 1241140143}
-  punchlineCardText: {fileID: 1262790386}
-  punchlineCardCategoriesText: {fileID: 2042513351}
 --- !u!4 &133543511
 Transform:
   m_ObjectHideFlags: 0
@@ -442,6 +424,30 @@ Transform:
   - {fileID: 958444058}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &133543512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133543509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7b3f5de99c22141a47588cc1ec2ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audienceCategories:
+  - animal
+  - people
+  - tech
+  - health
+  - food
+  - tool
+  cardDealer: {fileID: 1018274391}
+  setupCardText: {fileID: 939048410}
+  setupCardCategoriesText: {fileID: 1241140143}
+  punchlineCardText: {fileID: 1262790386}
+  punchlineCardCategoriesText: {fileID: 2042513351}
 --- !u!1 &323995203
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +531,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
+      - m_Target: {fileID: 133543512}
         m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
         m_MethodName: RegenerateCards
         m_Mode: 1
@@ -793,8 +799,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
-        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+      - m_Target: {fileID: 1018274391}
+        m_TargetAssemblyTypeName: CardDealer, Assembly-CSharp
         m_MethodName: NextPunchline
         m_Mode: 1
         m_Arguments:
@@ -926,8 +932,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
-        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+      - m_Target: {fileID: 1018274391}
+        m_TargetAssemblyTypeName: CardDealer, Assembly-CSharp
         m_MethodName: NextSetup
         m_Mode: 1
         m_Arguments:
@@ -1258,8 +1264,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
-        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+      - m_Target: {fileID: 1018274391}
+        m_TargetAssemblyTypeName: CardDealer, Assembly-CSharp
         m_MethodName: PreviousPunchline
         m_Mode: 1
         m_Arguments:
@@ -1385,7 +1391,7 @@ GameObject:
   - component: {fileID: 939048409}
   - component: {fileID: 939048410}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1438,7 +1444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The chicken was a glorious thing
+  m_text: text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1469,9 +1475,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 1024
@@ -1612,6 +1618,69 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1018274390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018274392}
+  - component: {fileID: 1018274391}
+  m_Layer: 0
+  m_Name: CardDealer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1018274391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018274390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce5b24d682b9a341851bda2b07b1948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setupCardsCount: 5
+  punchlineCardCount: 5
+  categoryReader: {fileID: 2010104546}
+  onCardsChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 133543512}
+        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+        m_MethodName: DisplayCards
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  goodCards: 2
+--- !u!4 &1018274392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018274390}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1222397560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,7 +1757,7 @@ GameObject:
   - component: {fileID: 1241140142}
   - component: {fileID: 1241140143}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Category
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1741,7 +1810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: + animal
+  m_text: category
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1823,7 +1892,7 @@ GameObject:
   - component: {fileID: 1262790385}
   - component: {fileID: 1262790386}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1876,7 +1945,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: because it could.
+  m_text: text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1907,9 +1976,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 1024
@@ -2306,6 +2375,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2010104545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2010104547}
+  - component: {fileID: 2010104546}
+  m_Layer: 0
+  m_Name: CategoryReader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2010104546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010104545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69178ee906026304191f5a98e8d5c1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setupFileName: categoriesSetup.txt
+  punchlineFileName: categoriesPunchline.txt
+--- !u!4 &2010104547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010104545}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2042513350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +2433,7 @@ GameObject:
   - component: {fileID: 2042513352}
   - component: {fileID: 2042513351}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Category
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2344,7 +2459,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: + test
+  m_text: category
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2583,3 +2698,5 @@ SceneRoots:
   - {fileID: 1934780462}
   - {fileID: 133543511}
   - {fileID: 1530139608}
+  - {fileID: 1018274392}
+  - {fileID: 2010104547}
