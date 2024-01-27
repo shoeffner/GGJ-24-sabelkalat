@@ -1,8 +1,0 @@
-animal
-technology
-medicine
-foodanddrinks
-tools
-verhicles
-jobs
-history

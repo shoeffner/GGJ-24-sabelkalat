@@ -24,7 +24,15 @@ public class CardPrinter
 
     public static string GetSetupText(CardParser.SetupCard setupCard)
     {
-        return ReplaceNounPlaceholders(setupCard.text, setupCard.noun);
+        var text = ReplaceNounPlaceholders(setupCard.text, setupCard.noun);
+    
+        if (!string.IsNullOrEmpty(text))
+        {
+            // Make the first letter uppercase
+            text = char.ToUpper(text[0]) + text.Substring(1);
+        }
+
+        return text;
     }
 
     public static string GetPunchlineText(CardParser.SetupCard setupCard, CardParser.PunchlineCard punchlineCard)
@@ -75,7 +83,7 @@ public class CardPrinter
         text = text.Replace("<noun>", noun.name);
         text = text.Replace("<pronounSubjective>", subjectivePronouns[noun.gender]);
         text = text.Replace("<pronounObjective>", objectivePronouns[noun.gender]);
-        text = text.Replace("<pronounPosessive>", possessivePronouns[noun.gender]);
+        text = text.Replace("<pronounPossessive>", possessivePronouns[noun.gender]);
         text = text.Replace("<adjective>", noun.adjective);
 
         return text;

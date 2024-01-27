@@ -1,0 +1,7 @@
+animal
+tech
+health
+food
+tool
+vehicle
+people

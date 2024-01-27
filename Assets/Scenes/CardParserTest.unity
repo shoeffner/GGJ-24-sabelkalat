@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -184,7 +184,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -340,8 +341,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
-        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+      - m_Target: {fileID: 1018274391}
+        m_TargetAssemblyTypeName: CardDealer, Assembly-CSharp
         m_MethodName: PreviousSetup
         m_Mode: 1
         m_Arguments:
@@ -399,7 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133543511}
-  - component: {fileID: 133543510}
+  - component: {fileID: 133543512}
   m_Layer: 0
   m_Name: CardParserTest
   m_TagString: Untagged
@@ -407,24 +408,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &133543510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133543509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ce5b24d682b9a341851bda2b07b1948, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  setupCardsCount: 5
-  punchlineCardCount: 5
-  setupCardText: {fileID: 939048410}
-  setupCardCategoriesText: {fileID: 1241140143}
-  punchlineCardText: {fileID: 1262790386}
-  punchlineCardCategoriesText: {fileID: 2042513351}
 --- !u!4 &133543511
 Transform:
   m_ObjectHideFlags: 0
@@ -441,6 +424,30 @@ Transform:
   - {fileID: 958444058}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &133543512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133543509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7b3f5de99c22141a47588cc1ec2ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audienceCategories:
+  - animal
+  - people
+  - tech
+  - health
+  - food
+  - tool
+  cardDealer: {fileID: 1018274391}
+  setupCardText: {fileID: 939048410}
+  setupCardCategoriesText: {fileID: 1241140143}
+  punchlineCardText: {fileID: 1262790386}
+  punchlineCardCategoriesText: {fileID: 2042513351}
 --- !u!1 &323995203
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +531,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
+      - m_Target: {fileID: 133543512}
         m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
         m_MethodName: RegenerateCards
         m_Mode: 1
@@ -635,7 +642,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -791,8 +799,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
-        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+      - m_Target: {fileID: 1018274391}
+        m_TargetAssemblyTypeName: CardDealer, Assembly-CSharp
         m_MethodName: NextPunchline
         m_Mode: 1
         m_Arguments:
@@ -924,8 +932,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
-        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+      - m_Target: {fileID: 1018274391}
+        m_TargetAssemblyTypeName: CardDealer, Assembly-CSharp
         m_MethodName: NextSetup
         m_Mode: 1
         m_Arguments:
@@ -1035,7 +1043,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1255,8 +1264,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133543510}
-        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+      - m_Target: {fileID: 1018274391}
+        m_TargetAssemblyTypeName: CardDealer, Assembly-CSharp
         m_MethodName: PreviousPunchline
         m_Mode: 1
         m_Arguments:
@@ -1382,7 +1391,7 @@ GameObject:
   - component: {fileID: 939048409}
   - component: {fileID: 939048410}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1435,11 +1444,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The chicken was a glorious thing
+  m_text: text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1465,9 +1475,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 1024
@@ -1608,6 +1618,69 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1018274390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018274392}
+  - component: {fileID: 1018274391}
+  m_Layer: 0
+  m_Name: CardDealer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1018274391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018274390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce5b24d682b9a341851bda2b07b1948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setupCardsCount: 5
+  punchlineCardCount: 5
+  categoryReader: {fileID: 2010104546}
+  onCardsChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 133543512}
+        m_TargetAssemblyTypeName: CardParserTest, Assembly-CSharp
+        m_MethodName: DisplayCards
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  goodCards: 2
+--- !u!4 &1018274392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018274390}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1222397560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,7 +1757,7 @@ GameObject:
   - component: {fileID: 1241140142}
   - component: {fileID: 1241140143}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Category
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1737,11 +1810,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: + animal
+  m_text: category
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1818,7 +1892,7 @@ GameObject:
   - component: {fileID: 1262790385}
   - component: {fileID: 1262790386}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1871,11 +1945,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: because it could.
+  m_text: text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1901,9 +1976,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 1024
@@ -2066,7 +2141,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2299,6 +2375,260 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2010104545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2010104547}
+  - component: {fileID: 2010104546}
+  m_Layer: 0
+  m_Name: CategoryReader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2010104546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010104545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69178ee906026304191f5a98e8d5c1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  categories:
+  - name: animal
+    isSetup: 1
+    icon: {fileID: 21300000, guid: c7e82f56d15a2524c94c3e0ff28affc2, type: 3}
+    sounds:
+    - {fileID: 8300000, guid: dccc49713b0455c48a31a4d7f6867d5e, type: 3}
+    - {fileID: 8300000, guid: 12fab8d67cf44334982853750d2fb3c4, type: 3}
+    - {fileID: 8300000, guid: 57c6b2f83dab0f141909d58383ce52be, type: 3}
+    - {fileID: 8300000, guid: 0f2a0d7ce31d0894e8d068efeedaa51d, type: 3}
+    - {fileID: 8300000, guid: c0ad16643c90a6e4591b6a275eeef492, type: 3}
+    - {fileID: 8300000, guid: 5ddb6fb16340bb34787dc13d0c0ee0a4, type: 3}
+    - {fileID: 8300000, guid: b34480ef3aee8fa4c9235a220c7ec884, type: 3}
+    - {fileID: 8300000, guid: f645e8c0d126d1a489777bfc29d69e6b, type: 3}
+    - {fileID: 8300000, guid: d5ad4dd9678dcde48aca351ade45736f, type: 3}
+    - {fileID: 8300000, guid: fec0fcab2267e574bb5c16ae58146962, type: 3}
+    - {fileID: 8300000, guid: a1871474560a85241b2e2206690546e8, type: 3}
+    - {fileID: 8300000, guid: dc5eece714124894eb30f88f0809b610, type: 3}
+    - {fileID: 8300000, guid: d9086119e2356934fa4cfa21b175e886, type: 3}
+    - {fileID: 8300000, guid: c016fd36cb449e340832acbfd0df011c, type: 3}
+    - {fileID: 8300000, guid: 027955373ae564b47b67bc27ffaa641a, type: 3}
+    - {fileID: 8300000, guid: d2d0c84ba2b79254cb8114a3f70d4fb7, type: 3}
+    - {fileID: 8300000, guid: 85b91a368527ea64d9f0deab9acb48e0, type: 3}
+    - {fileID: 8300000, guid: 1e7874591eaec544fa9336d3bf6d723b, type: 3}
+    - {fileID: 8300000, guid: 3b005c99169f15944bb5bb0084c8f56e, type: 3}
+    - {fileID: 8300000, guid: c402b3e0352c1f345a19bd107cad71ba, type: 3}
+    - {fileID: 8300000, guid: 662d410c6ab3e804b99d2303b2f9e22b, type: 3}
+    - {fileID: 8300000, guid: 5715ae7ac58f90f46a80217c07167abd, type: 3}
+  - name: tech
+    isSetup: 1
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: c9579664966297e4893daebc04337bf8, type: 3}
+    - {fileID: 8300000, guid: 3c33f036c508b6346b36d7f475508aff, type: 3}
+    - {fileID: 8300000, guid: a4afcf0bef37f1e45a1a86e9ff6a98cc, type: 3}
+    - {fileID: 8300000, guid: baf3094faef0ef04f841724998923fb5, type: 3}
+    - {fileID: 8300000, guid: b7918459359416544860cf13eeebcb1f, type: 3}
+    - {fileID: 8300000, guid: 78e6b9a83afb31a4784f3e7b4eb64c01, type: 3}
+    - {fileID: 8300000, guid: 5543cb9d5ca97434596d0168321eb723, type: 3}
+    - {fileID: 8300000, guid: 5f6cecc7e2d1c244e8f22a1a9b7875eb, type: 3}
+    - {fileID: 8300000, guid: 17c9a9bf35534a64d9d47ecd93989cc2, type: 3}
+    - {fileID: 8300000, guid: 517e025b8720f9c4592e1e2e41aca7e2, type: 3}
+    - {fileID: 8300000, guid: 349818861e3a3604f92c3a9f5551f686, type: 3}
+    - {fileID: 8300000, guid: 293687b209f8fdf429be936b940d19e1, type: 3}
+    - {fileID: 8300000, guid: de8af5a8bb6828a4a9b9a485742cae66, type: 3}
+    - {fileID: 8300000, guid: 8f550bb40dffa964bacb01e931059fd8, type: 3}
+  - name: health
+    isSetup: 1
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: e531a5858a3074648852f207b858b1d7, type: 3}
+    - {fileID: 8300000, guid: 8f8889448912cc341883598ee55048ad, type: 3}
+    - {fileID: 8300000, guid: 43a5ba63090db7b48a23409e1ee1be9a, type: 3}
+    - {fileID: 8300000, guid: 768a3707a92109a4c8079df93989a5e1, type: 3}
+    - {fileID: 8300000, guid: 62e6c3ed2c7118b4d8cda118a54af226, type: 3}
+    - {fileID: 8300000, guid: 0ffdf61ff28b416488e3b622697fbed6, type: 3}
+    - {fileID: 8300000, guid: d5f464fb294f8dc46a27b3f85e6835bd, type: 3}
+    - {fileID: 8300000, guid: 243a9fd6d237b4b4fa3277488f9fe0b9, type: 3}
+    - {fileID: 8300000, guid: edc9e4ac8d3d52540802c6b507dd0f1c, type: 3}
+    - {fileID: 8300000, guid: 0a205dfe9adfbf5429e70b38fcc6d998, type: 3}
+    - {fileID: 8300000, guid: 8edd1ceedb7f65240b43d3f71c0470e3, type: 3}
+    - {fileID: 8300000, guid: 12083dbd1c85e574cbdccafe061ee2d2, type: 3}
+  - name: food
+    isSetup: 1
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: c19e907db6154d04f951aad6ed1c0985, type: 3}
+    - {fileID: 8300000, guid: 718513f08566b6043a0fd7cd2288dff4, type: 3}
+    - {fileID: 8300000, guid: c8330ded0c8dd6e49897d276defafa09, type: 3}
+    - {fileID: 8300000, guid: 27714fab6cc639b43963adf447872594, type: 3}
+    - {fileID: 8300000, guid: 71b2123d88fd8214481481a66a7c2f20, type: 3}
+    - {fileID: 8300000, guid: e2cf5d6cc9b5cc5478802f370f957eff, type: 3}
+    - {fileID: 8300000, guid: d8f30b119182843499034d299435587f, type: 3}
+    - {fileID: 8300000, guid: 096a1f21cdcc7cf42812afb58ac74848, type: 3}
+    - {fileID: 8300000, guid: ce2029ae05e656a4e95207fd5cea6c5e, type: 3}
+    - {fileID: 8300000, guid: b8cf056b95bbad947b46b0c9463efb29, type: 3}
+    - {fileID: 8300000, guid: 3d52e19885c2a9842af837489932270e, type: 3}
+    - {fileID: 8300000, guid: 41f7d594942d2c34dbdcd92abfb47f9b, type: 3}
+  - name: tool
+    isSetup: 1
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 1d5211d5964c5ea49b4355d31476e354, type: 3}
+    - {fileID: 8300000, guid: 9ee1d7ac060d74f47af2cb7dc38b3f79, type: 3}
+    - {fileID: 8300000, guid: 9c0f15d86f54b4c4b9e1226906e2ce9a, type: 3}
+    - {fileID: 8300000, guid: e2a56414b01d7994fb994c929d0c6f1e, type: 3}
+    - {fileID: 8300000, guid: c32dffee957411f46a2dab5b78a77ec8, type: 3}
+    - {fileID: 8300000, guid: 2e1b8dbfdc225fb408f7418621104fe3, type: 3}
+    - {fileID: 8300000, guid: ad804f6791a74be4da70521e356eb7da, type: 3}
+  - name: vehicle
+    isSetup: 1
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 455ce617528b7f546acee8cf8d87939b, type: 3}
+    - {fileID: 8300000, guid: b9bfbe8f1e0d54e449111127012b4f87, type: 3}
+    - {fileID: 8300000, guid: 9171144375c179748a88fbdc5c51f9c8, type: 3}
+    - {fileID: 8300000, guid: 0e2ecbb37306bdc43a5210e6a509cc92, type: 3}
+    - {fileID: 8300000, guid: c3abf8f5dbe119c4d8e77b44bb0d2258, type: 3}
+    - {fileID: 8300000, guid: f8c1f279a6d846a4c8b615d8985319b1, type: 3}
+    - {fileID: 8300000, guid: bf91b264ce23850449600df2b38df5a3, type: 3}
+    - {fileID: 8300000, guid: cc966bbdff04e6545856fb14f899e213, type: 3}
+    - {fileID: 8300000, guid: 9977875b788207645a951f18cfb1b84a, type: 3}
+  - name: people
+    isSetup: 1
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: eaf896e7def967641b92718266790274, type: 3}
+    - {fileID: 8300000, guid: 880dcdd6fe2126247bfe1587f8ec2746, type: 3}
+    - {fileID: 8300000, guid: 45ebe56848a00bc419c1b9847faf5b1f, type: 3}
+    - {fileID: 8300000, guid: e7a4568604e3d4a46b5b93f9e0671902, type: 3}
+    - {fileID: 8300000, guid: c7d74a11eb891e248aa2f6efc9637972, type: 3}
+    - {fileID: 8300000, guid: 74fb68d155f477948becf7c86a6a0a98, type: 3}
+    - {fileID: 8300000, guid: d88ebb6c10f540a43ba6c957e391deec, type: 3}
+  - name: weather
+    isSetup: 0
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 9cfdeb021dd88b449b9886994f75c1ff, type: 3}
+    - {fileID: 8300000, guid: e26036b0fbf909a4ebd1959b4772794b, type: 3}
+    - {fileID: 8300000, guid: fe742b1f98fa17a4baea6ad5c342982a, type: 3}
+    - {fileID: 8300000, guid: 64f21511707fe9a458506caf4ce3b894, type: 3}
+    - {fileID: 8300000, guid: 0354bffa3f24a034cae7d8e0ae20c29f, type: 3}
+    - {fileID: 8300000, guid: 83738e20824548446a7b09061535fb8c, type: 3}
+    - {fileID: 8300000, guid: 183b56ab234942f4dbab90331119cbae, type: 3}
+    - {fileID: 8300000, guid: 6a33dccbc112cb540b5b3b7332b69ed4, type: 3}
+    - {fileID: 8300000, guid: 84b0c3137757a874f87ff3616edf16a7, type: 3}
+    - {fileID: 8300000, guid: 58c2c10239977554799f9393b40f1d18, type: 3}
+    - {fileID: 8300000, guid: 01917c22a1ab528469021c00c7ee81a2, type: 3}
+  - name: emotion
+    isSetup: 0
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 042a22f17a902f8448c5d046b8f7af73, type: 3}
+    - {fileID: 8300000, guid: 708479d3e6f490c4b95299d3636140cf, type: 3}
+    - {fileID: 8300000, guid: c02182e8ad831a34098bfa6f35c9ca06, type: 3}
+    - {fileID: 8300000, guid: 0679c599878febb4f97cdfc24049581e, type: 3}
+    - {fileID: 8300000, guid: b9a04580978bc0044b2f273c37676595, type: 3}
+    - {fileID: 8300000, guid: ab8a035de3ce40a44bc0bbe1613569e4, type: 3}
+    - {fileID: 8300000, guid: 291c3f4f0f62cbf47a2edd66eabd1786, type: 3}
+    - {fileID: 8300000, guid: 4058c6e38f83eb247946f5afdb2c8c76, type: 3}
+    - {fileID: 8300000, guid: 7d7fc974194aa9f4f91a75f4a792b6fe, type: 3}
+    - {fileID: 8300000, guid: 7ad97b6b8b101bf4da4ea2f8bd0a5684, type: 3}
+    - {fileID: 8300000, guid: 328aa3331fbcf6348a17f217d37eb435, type: 3}
+    - {fileID: 8300000, guid: dd3d82ceaed1df843bca50cca2be2abc, type: 3}
+    - {fileID: 8300000, guid: ca3c03238614b2b4f9b96409a4545134, type: 3}
+    - {fileID: 8300000, guid: 8a4e6cc13929fa34bb2f9b87dec2dbd7, type: 3}
+  - name: accident
+    isSetup: 0
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 7167087960ea35a49a3022c1e0580c7b, type: 3}
+    - {fileID: 8300000, guid: 5cd2f8c663c287443b71d281cecdf93d, type: 3}
+    - {fileID: 8300000, guid: ce5422537c0cb1f47ba6ac0c1dbfe85e, type: 3}
+    - {fileID: 8300000, guid: 9f74e559506ce4b40b5a615fde0a0675, type: 3}
+    - {fileID: 8300000, guid: 4e82e3435b9344d4b941248368a18ccb, type: 3}
+    - {fileID: 8300000, guid: 4a06341635810f642ab3c13dc0f2e6fa, type: 3}
+    - {fileID: 8300000, guid: 447d4545b346ddf49ae8e1b2bbd60b05, type: 3}
+    - {fileID: 8300000, guid: 638d89ac4e7073044b89945322010958, type: 3}
+    - {fileID: 8300000, guid: 6f6276124ded43c4fb4c108ff4eb03da, type: 3}
+  - name: action
+    isSetup: 0
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 28667978b0a3b3c4ca47c96c3bfb24e7, type: 3}
+    - {fileID: 8300000, guid: c80545e553fe49747b9e8dd4d0288f0d, type: 3}
+    - {fileID: 8300000, guid: 8dfef013af60a384fbb3d6ca577561a4, type: 3}
+    - {fileID: 8300000, guid: 05ec58a9892f5d34184cde57fb885a9f, type: 3}
+    - {fileID: 8300000, guid: d6ee3139d936e5f48a69930630811433, type: 3}
+    - {fileID: 8300000, guid: 5b8d9727a0554034ca1a19af25108ef3, type: 3}
+    - {fileID: 8300000, guid: 6a87a826d19ae504b9beb57862e138d3, type: 3}
+    - {fileID: 8300000, guid: 1faf52b8274089f47a152d43629510ae, type: 3}
+  - name: endingPhrase
+    isSetup: 0
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: f8bfb31b0fc11a541b6f78426493d939, type: 3}
+    - {fileID: 8300000, guid: 9afe069d2af4fcb44b9eed51498c88de, type: 3}
+    - {fileID: 8300000, guid: 291de81cbcd6a614a8bbd9eecc797980, type: 3}
+    - {fileID: 8300000, guid: 401cb8db3d608544e9e7b7030c29ff42, type: 3}
+    - {fileID: 8300000, guid: 8556ebed1451d0e45bebfbe72f3de210, type: 3}
+    - {fileID: 8300000, guid: d6522943650ecd74f90f88e66044fb3a, type: 3}
+    - {fileID: 8300000, guid: d009bb9a0340a8849ac0a9e0f77dfbf1, type: 3}
+    - {fileID: 8300000, guid: 92856a323610c634ba35b1422f47e15b, type: 3}
+    - {fileID: 8300000, guid: da8b908959dc6ad4d86815b6ad0243d6, type: 3}
+  - name: moral
+    isSetup: 0
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: b1f76b743a8f9094f83921d27bdc943e, type: 3}
+    - {fileID: 8300000, guid: 133539f9bfa02014ba8d576aaddd3177, type: 3}
+    - {fileID: 8300000, guid: 9caff95e1e4a74c4bb9e783b69c9fced, type: 3}
+    - {fileID: 8300000, guid: 540e68244047350488617c81179decc8, type: 3}
+    - {fileID: 8300000, guid: 2350ef52028f11c40b03d5c6321745de, type: 3}
+    - {fileID: 8300000, guid: 8f99e642e3729264fb3b4bf909f0deec, type: 3}
+    - {fileID: 8300000, guid: 0b4eb631ce081984e9f056472f1f8869, type: 3}
+  - name: explanation
+    isSetup: 0
+    icon: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 2e2f73f863832134b817ee8405153d25, type: 3}
+    - {fileID: 8300000, guid: fde58e7330a93a142a28297f42fd3e5d, type: 3}
+    - {fileID: 8300000, guid: 8ebb69e881e613a48a71d0f36d7e4555, type: 3}
+    - {fileID: 8300000, guid: b07237d2297c7344fa341f60e3bcbb56, type: 3}
+    - {fileID: 8300000, guid: bbd8a8a2564cc554780ef84ecea5ec4c, type: 3}
+    - {fileID: 8300000, guid: 37ca32ac85ac9aa4cac991277c9f83fb, type: 3}
+    - {fileID: 8300000, guid: de9d118a2b96860439e51802b2ed0943, type: 3}
+    - {fileID: 8300000, guid: f587eb5d35a194442b5f7e2102077612, type: 3}
+    - {fileID: 8300000, guid: 76ef1261324678c4198eefe0450ae0c9, type: 3}
+    - {fileID: 8300000, guid: bba4f47ff5e1ba341859a1c733521f7d, type: 3}
+  setupFileName: categoriesSetup.txt
+  punchlineFileName: categoriesPunchline.txt
+--- !u!4 &2010104547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010104545}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2042513350
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,7 +2641,7 @@ GameObject:
   - component: {fileID: 2042513352}
   - component: {fileID: 2042513351}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Category
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2337,11 +2667,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: + test
+  m_text: category
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2494,7 +2825,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -2574,3 +2906,5 @@ SceneRoots:
   - {fileID: 1934780462}
   - {fileID: 133543511}
   - {fileID: 1530139608}
+  - {fileID: 1018274392}
+  - {fileID: 2010104547}
