@@ -86,7 +86,7 @@ namespace Sabelkalat
 
         void OnToggleCard(InputValue inputValue)
         {
-            if (currentViewPoint == ViewPoint.Audience) return;
+            if (currentViewPoint == ViewPoint.Audience || cardDealer == null) return;
             var previous = inputValue.Get<float>() < 0;
 
             if (focusedCard == leftCard)
