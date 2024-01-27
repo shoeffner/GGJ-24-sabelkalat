@@ -31,7 +31,7 @@ public class GameManager : Singleton<GameManager>
             activeGame = true;
             SceneManager.SetActiveScene(scene);
         }
-        if (scene.buildIndex == (int)SceneIndexes.UI_OVERLAY && !noGameScenes.Contains(SceneManager.GetActiveScene().buildIndex))
+        if (!noGameScenes.Contains(SceneManager.GetActiveScene().buildIndex))
         {
             ViewManager.Instance.SetStartingView(ViewManager.Instance.GetView<GameOverlayView>());
             ViewManager.Instance.SetCameraState(false);

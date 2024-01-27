@@ -6,7 +6,7 @@ namespace Sabelkalat
 {
     enum ViewPoint
     {
-        Card, Audience
+        Undefined, Card, Audience
     }
 
     public class Character : MonoBehaviour
@@ -24,7 +24,7 @@ namespace Sabelkalat
 
         #region Internal State
 
-        private ViewPoint currentViewPoint = ViewPoint.Audience;
+        private ViewPoint currentViewPoint = ViewPoint.Undefined;
         private Card focusedCard = null;
 
         #endregion Internal State
@@ -39,6 +39,8 @@ namespace Sabelkalat
 
         void Start()
         {
+            focusedCard = leftCard;
+            focusedCard.Focus();
             ActivateViewPoint(ViewPoint.Audience);
             EnsureLookAt();
         }
@@ -69,7 +71,7 @@ namespace Sabelkalat
         {
             if (currentViewPoint != ViewPoint.Card) return;
             var newFocusedCard = inputValue.Get<float>() < 0 ? leftCard : rightCard;
-            if (focusedCard != null && newFocusedCard != focusedCard)
+            if (newFocusedCard != focusedCard)
             {
                 focusedCard.Unfocus();
             }
@@ -84,7 +86,8 @@ namespace Sabelkalat
 
         void OnToggleCard(InputValue inputValue)
         {
-
+            if (currentViewPoint == ViewPoint.Audience) return;
+            focusedCard.Swap();
         }
 
         #endregion Input Handlers

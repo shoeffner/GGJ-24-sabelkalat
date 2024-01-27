@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class GameOrganizer : Singleton<GameOrganizer>
 {
     public UnityAction OnGameOver;
+    public UnityAction<int> OnScoreChanged;
 
     [SerializeField] private GameSetup gameSetup;
     [SerializeField] public Audience audience;
@@ -19,6 +20,7 @@ public class GameOrganizer : Singleton<GameOrganizer>
     public void AddScore(int score)
     {
         currentScore = Mathf.Clamp(currentScore + score, gameSetup.lowerScoreLimit, gameSetup.upperScoreLimit);
+        OnScoreChanged.Invoke(score);
     }
 
     public int GetCurrentScore() => currentScore;
