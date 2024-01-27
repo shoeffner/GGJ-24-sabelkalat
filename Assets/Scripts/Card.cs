@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Sabelkalat
 {
@@ -32,7 +33,11 @@ namespace Sabelkalat
 
         [Header("Diagnostics")]
         public bool enableLog = false;
-        public TextMeshProUGUI textField = null;
+
+        private CardParser.SetupCard currentSetupCard = null;
+        private CardParser.PunchlineCard currentPunchlineCard = null;
+
+        private TextMeshProUGUI textField = null;
 
         private bool initialTextReceived = false;
 
@@ -43,27 +48,56 @@ namespace Sabelkalat
 
         public void OnCardsChanged(CardParser.SetupCard setupCard, CardParser.PunchlineCard punchlineCard)
         {
-            string newText = textField.text;
-            switch (cardType)
+            if (!initialTextReceived)
             {
-                case CardType.Setup:
-                    newText = CardPrinter.GetSetupText(setupCard);
-                    break;
-                case CardType.Punchline:
-                    newText = CardPrinter.GetPunchlineText(setupCard, punchlineCard);
-                    break;
+                if (cardType == CardType.Setup)
+                {
+                    OnSetupCardChanged(setupCard, false);
+                }
+                if (cardType == CardType.Punchline)
+                {
+                    OnPunchlineCardChanged(setupCard, punchlineCard, false);
+                }
+                initialTextReceived = true;
+                currentSetupCard = setupCard;
+                currentPunchlineCard = punchlineCard;
+                return;
             }
-            if (newText != textField.text)
+            if (cardType == CardType.Setup && setupCard != currentSetupCard)
             {
-                if (initialTextReceived)
-                {
-                    Swap(newText);
-                }
-                else
-                {
-                    textField.text = newText;
-                    initialTextReceived = true;
-                }
+                OnSetupCardChanged(setupCard);
+                currentSetupCard = setupCard;
+            }
+            if (cardType == CardType.Punchline)
+            {
+                OnPunchlineCardChanged(setupCard, punchlineCard, punchlineCard != currentPunchlineCard);
+                currentPunchlineCard = punchlineCard;
+            }
+        }
+
+        public void OnSetupCardChanged(CardParser.SetupCard setupCard, bool swap = true)
+        {
+            string text = CardPrinter.GetSetupText(setupCard);
+            if (swap)
+            {
+                Swap(text);
+            }
+            else
+            {
+                textField.text = text;
+            }
+        }
+
+        public void OnPunchlineCardChanged(CardParser.SetupCard setupCard, CardParser.PunchlineCard punchlineCard, bool swap)
+        {
+            string text = CardPrinter.GetPunchlineText(setupCard, punchlineCard);
+            if (swap)
+            {
+                Swap(text);
+            }
+            else
+            {
+                textField.text = text;
             }
         }
 
