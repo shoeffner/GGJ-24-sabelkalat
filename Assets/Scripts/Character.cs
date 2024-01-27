@@ -15,7 +15,7 @@ namespace Sabelkalat
 
         [Range(0.5f, 2.0f)]
         public float eyeHeight = 1.7f;
-        public Camera mainCamera = null;
+        public Camera characterCamera = null;
         public Transform lookAtTarget = null;
 
         [Header("Cards")]
@@ -47,6 +47,7 @@ namespace Sabelkalat
 
         void Update()
         {
+            EnsureMainCameraPositionAndRotation();
         }
 
         #endregion MonoBehaviour Callbacks
@@ -127,15 +128,15 @@ namespace Sabelkalat
 
         private void EnsureMainCameraPositionAndRotation()
         {
-            if (mainCamera == null)
+            if (characterCamera == null)
             {
-                mainCamera = Camera.main;
+                characterCamera = Camera.main;
             }
-            mainCamera.transform.SetParent(transform);
-            mainCamera.transform.SetLocalPositionAndRotation(new Vector3(0, eyeHeight, 0), Quaternion.identity);
+            characterCamera.transform.SetParent(transform);
+            characterCamera.transform.SetLocalPositionAndRotation(new Vector3(0, eyeHeight, 0), Quaternion.identity);
             if (lookAtTarget != null)
             {
-                mainCamera.transform.LookAt(lookAtTarget);
+                characterCamera.transform.LookAt(lookAtTarget);
             }
         }
     }

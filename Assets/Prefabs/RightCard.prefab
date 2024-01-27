@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5438342201267057062, guid: 1333da90596424098bff7fd06de09275, type: 3}
       propertyPath: m_Name
-      value: Card Variant
+      value: RightCard
       objectReference: {fileID: 0}
     - target: {fileID: 7673627925113240326, guid: 1333da90596424098bff7fd06de09275, type: 3}
       propertyPath: m_LocalPosition.x
