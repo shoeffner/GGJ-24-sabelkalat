@@ -43,6 +43,7 @@ namespace Sabelkalat
 
         void Start()
         {
+            GameOrganizer.Instance.OnNextRound += OnNextRound;
             playerInput = GetComponentInChildren<PlayerInput>();
             playerInput.enabled = true;
             focusedCard = leftCard;
@@ -89,7 +90,7 @@ namespace Sabelkalat
             Debug.Log("Submitting!");
             playerInput.enabled = false;
             ActivateViewPoint(ViewPoint.WaitForNextRound, true);
-            // cardDealer.Submit();
+            cardDealer.Submit();
         }
 
         void OnToggleCard(InputValue inputValue)
@@ -128,7 +129,7 @@ namespace Sabelkalat
 
         public void OnNextRound()
         {
-            ActivateViewPoint(ViewPoint.Audience, true);
+            ActivateViewPoint(ViewPoint.Card, true);
             playerInput.enabled = true;
         }
 
@@ -150,8 +151,8 @@ namespace Sabelkalat
                     rightCard.Show();
                     break;
                 case ViewPoint.WaitForNextRound:
-                    // leftCard.Lower();
-                    // rightCard.Lower();
+                    leftCard.Hide();
+                    rightCard.Hide();
                     break;
             }
             currentViewPoint = viewPoint;

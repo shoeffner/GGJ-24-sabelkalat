@@ -17,6 +17,10 @@ public class GameOrganizerEditor : Editor
         {
             test.AddScore(-2);
         }
+        if (GUILayout.Button("Next Round"))
+        {
+            test.NextRound();
+        }
         DrawDefaultInspector();
     }
 }
