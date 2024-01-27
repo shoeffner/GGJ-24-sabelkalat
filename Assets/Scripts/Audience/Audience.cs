@@ -4,37 +4,39 @@ using UnityEngine;
 public class Audience : MonoBehaviour
 {
     [SerializeField] private List<GameObject> viewerObjects;
-    [SerializeField] private List<Viewer> viewerTypePrefabs;
     [SerializeField] CategoryReader categoryReader;
 
     private List<Viewer> audience;
+    private List<Viewer> viewerTypePrefabs;
 
-    private void Awake()
+    public void SetNewViewers(List<Viewer> viewerTypePrefabs)
     {
-        if(viewerTypePrefabs.Count == 0 || viewerObjects.Count < viewerTypePrefabs.Count)
+        this.viewerTypePrefabs = viewerTypePrefabs;
+        SetupAudience();
+    }
+
+    private void SetupAudience()
+    {
+        if (viewerTypePrefabs.Count == 0 || viewerObjects.Count < viewerTypePrefabs.Count)
         {
             Debug.LogError("Check viewers in audience object");
             return;
         }
         audience = new List<Viewer>();
         // create viewers evenly per type
-        int numberPerViewerType = viewerObjects.Count/ viewerTypePrefabs.Count;
+        int numberPerViewerType = viewerObjects.Count / viewerTypePrefabs.Count;
+        Debug.Log(numberPerViewerType);
         int viewerTypeIndex = 0;
         for (int i = 0; i < viewerObjects.Count; i++)
         {
-            if(i != 0 && i % numberPerViewerType == 0)
+            if (i != 0 && i % numberPerViewerType == 0)
             {
                 viewerTypeIndex++;
             }
-            Viewer viewer = Instantiate(viewerTypePrefabs[viewerTypeIndex], viewerObjects[i].transform);
+            Viewer viewer = Instantiate(viewerTypePrefabs[Mathf.Min(viewerTypePrefabs.Count -1 ,viewerTypeIndex)], viewerObjects[i].transform);
             viewer.SetCategories(categoryReader.categories);
             audience.Add(viewer);
         }
-    }
-
-    public void AddViewer(Viewer viewer)
-    {
-        audience.Add(viewer);
     }
 
     public List<Category> GetCurrentAudienceCategories()
@@ -46,6 +48,5 @@ public class Audience : MonoBehaviour
         }
         return categories;
     }
-
 
 }
