@@ -19,14 +19,12 @@ public class Audience : MonoBehaviour
         audience = new List<Viewer>();
         // create viewers evenly per type
         int numberPerViewerType = viewerObjects.Count/ viewerTypePrefabs.Count;
-        Debug.Log("number per viewer type: " + numberPerViewerType);
         int viewerTypeIndex = 0;
         for (int i = 0; i < viewerObjects.Count; i++)
         {
             if(i != 0 && i % numberPerViewerType == 0)
             {
                 viewerTypeIndex++;
-                Debug.Log("current viewer: " + i + " change viewer type to " + viewerTypeIndex);
             }
             Viewer viewer = Instantiate(viewerTypePrefabs[viewerTypeIndex], viewerObjects[i].transform);
             viewer.SetCategories(categoryReader.categories);
@@ -37,6 +35,16 @@ public class Audience : MonoBehaviour
     public void AddViewer(Viewer viewer)
     {
         audience.Add(viewer);
+    }
+
+    public List<Category> GetCurrentAudienceCategories()
+    {
+        List<Category> categories = new List<Category>();
+        foreach (var viewer in audience)
+        {
+            categories.Add(viewer.CurrentCategory);
+        }
+        return categories;
     }
 
 

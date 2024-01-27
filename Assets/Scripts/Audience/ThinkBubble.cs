@@ -21,11 +21,6 @@ public class ThinkBubble : MonoBehaviour
         thinkBubbleHolder.transform.localScale = Vector3.zero;
     }
 
-    private void Start()
-    {
-        ShowCategeory();
-    }
-
     public void ChangeThinkBubble()
     {
         LeanTween.scale(thinkBubbleHolder, Vector3.zero, 0.5f).setEaseInBack().setOnComplete(() =>

@@ -11,7 +11,7 @@ public class Viewer : MonoBehaviour
     [SerializeField, Range(5, 10)] private float maxCategoryChangeTime;
     [SerializeField] private bool changeCategory = true;
     [SerializeField] ThinkBubble thinkBubble;
-    private Category currentCategory;
+    public Category CurrentCategory { get; private set; }
 
     private List<Category> categories;
 
@@ -28,17 +28,17 @@ public class Viewer : MonoBehaviour
         {
             this.categories.Add(categories[Random.Range(0, categories.Count)]);
         }
-        currentCategory = this.categories[Random.Range(0, this.categories.Count)];
-        Debug.Log("current category: " + currentCategory.name);
+        CurrentCategory = this.categories[Random.Range(0, this.categories.Count)];
+        Debug.Log("current category: " + CurrentCategory.name);
     }
 
     private IEnumerator ChangeCategory()
     {
         while (changeCategory)
         {
+            CurrentCategory = categories[Random.Range(0, categories.Count)];
+            thinkBubble.SetCategory(CurrentCategory);
             yield return new WaitForSeconds(Random.Range(minCategoryChangeTime, maxCategoryChangeTime));
-            currentCategory = categories[Random.Range(0, categories.Count)];
-            thinkBubble.SetCategory(currentCategory);
         }
     }
 }

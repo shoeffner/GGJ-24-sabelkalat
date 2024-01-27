@@ -1,7 +1,7 @@
 animal
 technology
 medicine
-food and drinks
+foodanddrinks
 tools
 verhicles
 jobs

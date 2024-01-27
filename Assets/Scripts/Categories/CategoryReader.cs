@@ -22,7 +22,7 @@ public class CategoryReader : MonoBehaviour
         var lines = System.IO.File.ReadAllLines(path);
         foreach (var line in lines)
         {
-            categories.Add(new Category { name = line});
+            categories.Add(new Category(line));
         }
     }
 }
