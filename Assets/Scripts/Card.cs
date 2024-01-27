@@ -4,12 +4,11 @@ namespace Sabelkalat
 {
     public class Card : MonoBehaviour
     {
+        [Tooltip("The pose when this card is in view and focused.")]
+        public Transform focusTarget = null;
 
         [Tooltip("The pose when this card is in view and not focused.")]
         public Transform holdTarget = null;
-
-        [Tooltip("The pose when this card is in view and focused.")]
-        public Transform focusTarget = null;
 
         [Tooltip("The pose when this card is not in view.")]
         public Transform hiddenTarget = null;
@@ -21,22 +20,25 @@ namespace Sabelkalat
 
         public void Focus()
         {
+            if(hasFocus) return;
             Log($"Focusing {this}");
-            // TODO: move to focusTarget
             hasFocus = true;
+            LeanTween.rotateLocal(gameObject, focusTarget.position, 1f).setEase(LeanTweenType.easeInOutQuad);
         }
 
         public void Unfocus()
         {
+            if(!hasFocus) return;
             Log($"Unfocusing {this}");
-            // TODO: move to holdTarget
             hasFocus = false;
+            LeanTween.rotateLocal(gameObject, holdTarget.position, 1f).setEase(LeanTweenType.easeInOutQuad);
         }
 
         public void Hide()
         {
+            if(!hasFocus) return;
             Log($"Hiding {this}");
-            // TODO: move to hiddenTarget
+            LeanTween.rotateLocal(gameObject, hiddenTarget.position, 1f).setEase(LeanTweenType.easeInOutQuad);
             hasFocus = false;
         }
 
@@ -49,7 +51,7 @@ namespace Sabelkalat
             }
             else
             {
-                // TODO: move to holdTarget
+                LeanTween.rotateLocal(gameObject, holdTarget.position, 1f).setEase(LeanTweenType.easeInOutQuad);
             }
         }
 
@@ -61,4 +63,4 @@ namespace Sabelkalat
             }
         }
     }
-}  // namespace Sabelkalat
+}
