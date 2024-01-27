@@ -11,7 +11,6 @@ public class GameOrganizer : Singleton<GameOrganizer>
 
     public Audience audience;
     [SerializeField] private GameSetup gameSetup;
-    public int CurrentScore => currentScore;
     [SerializeField] private float timeBetweenRounds = 2f;
     [SerializeField] private float fadeInTime = 0.5f;
     [SerializeField] private float fadeOutTime = 0.5f;

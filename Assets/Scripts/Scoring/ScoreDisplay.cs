@@ -12,6 +12,6 @@ public class ScoreDisplay : MonoBehaviour
 
     void Update()
     {
-        text.text = $"Score: {GameOrganizer.Instance.CurrentScore}";
+        text.text = $"Score: {GameOrganizer.Instance.GetCurrentScore()}";
     }
 }
