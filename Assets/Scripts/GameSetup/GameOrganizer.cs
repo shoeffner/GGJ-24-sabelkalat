@@ -1,16 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class GameOrganizer : Singleton<GameOrganizer>
 {
-    // trigger AddScore method from inspector
-
+    public UnityAction OnNextRound;
     public UnityAction OnGameOver;
     public UnityAction<int> OnScoreChanged;
 
     public Audience audience;
     [SerializeField] private GameSetup gameSetup;
+    [SerializeField] private float timeBetweenRounds = 2f;
+    [SerializeField] private float fadeInTime = 0.5f;
+    [SerializeField] private float fadeOutTime = 0.5f;
 
     [Header("Music")]
     [SerializeField] private AudioSource basicTrack;
@@ -40,11 +43,22 @@ public class GameOrganizer : Singleton<GameOrganizer>
     public void AddScore(int score)
     {
         Debug.Log("Score added: " + score);
+        foreach (Viewer viewer in audience.GetViewers())
+        {
+            viewer.ChangesCategory = false;
+        }
         currentScore = Mathf.Clamp(currentScore + score, gameSetup.lowerScoreLimit, gameSetup.upperScoreLimit);
         OnScoreChanged?.Invoke(score);
         PlayReactionSound(score);
 
         CheckForTrackIntensity(score);
+        StartCoroutine(NextRoundTrigger());
+    }
+
+    private IEnumerator NextRoundTrigger()
+    {
+        yield return new WaitForSeconds(timeBetweenRounds);
+        NextRound();
     }
 
     public int GetCurrentScore() => currentScore;
@@ -57,6 +71,7 @@ public class GameOrganizer : Singleton<GameOrganizer>
             OnGameOver?.Invoke();
             return;
         }
+        OnNextRound?.Invoke();
         audience.SetNewViewers(gameSetup.gameRounds[currentRoundIndex].viewers);
     }
     private void PlayReactionSound(int score)
@@ -88,17 +103,17 @@ public class GameOrganizer : Singleton<GameOrganizer>
             if (currentIntensity == 1)
             {
                 Debug.Log("intense Track");
-                StartCoroutine(AudioManager.Instance.FadeIn(intenseTrack, 0.5f));
+                StartCoroutine(AudioManager.Instance.FadeIn(intenseTrack, fadeInTime));
             }
             else if (currentIntensity == 2)
             {
                 Debug.Log("more intense Track");
-                StartCoroutine(AudioManager.Instance.FadeIn(moreIntenseTrack, 0.5f));
+                StartCoroutine(AudioManager.Instance.FadeIn(moreIntenseTrack, fadeInTime));
             }
             else if (currentIntensity == 3)
             {
                 Debug.Log("super intense Track");
-                StartCoroutine(AudioManager.Instance.FadeIn(superIntenseTrack, 0.5f));
+                StartCoroutine(AudioManager.Instance.FadeIn(superIntenseTrack, fadeInTime));
             }
         }
         else if (goodJokeSeqCounter >= 2)
@@ -108,17 +123,17 @@ public class GameOrganizer : Singleton<GameOrganizer>
             if (currentIntensity == 0)
             {
                 Debug.Log("basic Track");
-                StartCoroutine(AudioManager.Instance.FadeOut(intenseTrack, 0.5f));
+                StartCoroutine(AudioManager.Instance.FadeOut(intenseTrack, fadeOutTime));
             }
             else if (currentIntensity == 1)
             {
                 Debug.Log("intense Track");
-                StartCoroutine(AudioManager.Instance.FadeOut(moreIntenseTrack, 0.5f));
+                StartCoroutine(AudioManager.Instance.FadeOut(moreIntenseTrack, fadeOutTime));
             }
             else if (currentIntensity == 2)
             {
                 Debug.Log("more intense Track");
-                StartCoroutine(AudioManager.Instance.FadeOut(superIntenseTrack, 0.5f));
+                StartCoroutine(AudioManager.Instance.FadeOut(superIntenseTrack, fadeOutTime));
             }
         }
     }
