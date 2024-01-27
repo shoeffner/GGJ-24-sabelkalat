@@ -188,6 +188,36 @@ public class CardParser
         return allNouns[Random.Range(0, allNouns.Count)];
     }
 
+
+    public List<PunchlineCard> GetRandomPunchlines(int count)
+    {
+        var punchlines = new List<PunchlineCard>();
+        for (int i = 0; i < count; i++)
+        {
+            for (int j = 0; j < CARD_ALREADY_EXIST_TRIES; j++)
+            {
+                var punchline = GetRandomPunchline();
+                bool isPunchlineUnique = true;
+                foreach (var otherPunchline in punchlines)
+                {
+                    if (otherPunchline.text == punchline.text)
+                    {
+                        isPunchlineUnique = false;
+                        break;
+                    }
+                }
+                if (isPunchlineUnique)
+                {
+                    punchlines.Add(punchline);
+                    break;
+                }
+            }
+        }
+        Debug.Log($"Generated {punchlines.Count} punchlines");
+        return punchlines;
+    }
+
+
     public PunchlineCard GetRandomPunchline()
     {
         return punchlineCards[Random.Range(0, punchlineCards.Count)];
