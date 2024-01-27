@@ -41,7 +41,7 @@ namespace Sabelkalat
 
         private bool initialTextReceived = false;
 
-        void Start()
+        void Awake()
         {
             textField = GetComponentInChildren<TextMeshProUGUI>();
         }

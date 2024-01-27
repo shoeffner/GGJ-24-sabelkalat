@@ -33,6 +33,7 @@ public class CardDealer : MonoBehaviour
 
     [Tooltip("Enable all categories for testing")]
     public bool useAllCategories = false;
+    public bool useAudienceCategories = false;
 
 
     public void Start()
@@ -41,6 +42,10 @@ public class CardDealer : MonoBehaviour
         if (useAllCategories)
         {
             RegenerateCards(categoryReader.categories);
+        }
+        else if (useAudienceCategories)
+        {
+            RegenerateCards(GameOrganizer.Instance.audience.GetCurrentAudienceCategories());
         }
     }
 
