@@ -69,11 +69,12 @@ namespace Sabelkalat
         void OnFocusCard(InputValue inputValue)
         {
             if (currentViewPoint != ViewPoint.Card) return;
-            if (focusedCard != null)
+            var newFocusedCard = inputValue.Get<float>() < 0 ? leftCard : rightCard;
+            if (focusedCard != null && newFocusedCard != focusedCard)
             {
                 focusedCard.Unfocus();
             }
-            focusedCard = inputValue.Get<float>() < 0 ? leftCard : rightCard;
+            focusedCard = newFocusedCard;
             focusedCard.Focus();
         }
 
