@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class CardPrinter
 {
-    private static Dictionary<CardParser.Gender, string> pronouns = new() {
+    private static Dictionary<CardParser.Gender, string> subjectivePronouns = new() {
         {CardParser.Gender.Male, "he"},
         {CardParser.Gender.Female, "she"},
         {CardParser.Gender.Neuter, "it"},
+    };
+
+    private static Dictionary<CardParser.Gender, string> objectivePronouns = new() {
+        {CardParser.Gender.Male, "him"},
+        {CardParser.Gender.Female, "her"},
+        {CardParser.Gender.Neuter, "it"},
+    };
+
+    private static Dictionary<CardParser.Gender, string> possessivePronouns = new() {
+        {CardParser.Gender.Male, "his"},
+        {CardParser.Gender.Female, "her"},
+        {CardParser.Gender.Neuter, "its"},
     };
 
     public static string GetSetupText(CardParser.SetupCard setupCard)
@@ -61,7 +73,9 @@ public class CardPrinter
         }
 
         text = text.Replace("<noun>", noun.name);
-        text = text.Replace("<pronoun>", pronouns[noun.gender]);
+        text = text.Replace("<pronounSubjective>", subjectivePronouns[noun.gender]);
+        text = text.Replace("<pronounObjective>", objectivePronouns[noun.gender]);
+        text = text.Replace("<pronounPosessive>", possessivePronouns[noun.gender]);
         text = text.Replace("<adjective>", noun.adjective);
 
         return text;
