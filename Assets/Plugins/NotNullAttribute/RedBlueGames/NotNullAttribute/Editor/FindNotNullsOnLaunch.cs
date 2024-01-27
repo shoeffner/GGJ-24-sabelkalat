@@ -10,6 +10,7 @@
     [InitializeOnLoad]
     public class FindNotNullsOnLaunch
     {
+        /*
         static FindNotNullsOnLaunch()
         {
             if (Debug.isDebugBuild)
@@ -24,5 +25,6 @@
             EditorApplication.update -= RunOnce;
             RedBlueGames.NotNull.NotNullFinder.SearchForAndErrorForNotNullViolations();
         }
+        */
     }
 }

@@ -58,19 +58,21 @@ public class CardParserTest : MonoBehaviour
 
     public void RegenerateCards()
     {
-        setupCards = new List<CardParser.SetupCard>();
+        /*setupCards = new List<CardParser.SetupCard>();
         for (int i = 0; i < setupCardsCount; i++)
         {
             var setup = cardParser.GetRandomSetup();
             setupCards.Add(setup);
-        }
+        }*/
+        setupCards = cardParser.GetRandomSetups(setupCardsCount);
 
-        punchlineCards = new List<CardParser.PunchlineCard>();
+        /*punchlineCards = new List<CardParser.PunchlineCard>();
         for (int i = 0; i < punchlineCardCount; i++)
         {
             var punchline = cardParser.GetRandomPunchline();
             punchlineCards.Add(punchline);
-        }
+        }*/
+        punchlineCards = cardParser.GetRandomPunchlines(punchlineCardCount);
 
         currentSetup = 0;
         currentPunchline = 0;
@@ -101,7 +103,7 @@ public class CardParserTest : MonoBehaviour
     public void PreviousSetup()
     {
         currentSetup--;
-        if (currentSetup <= 0)
+        if (currentSetup < 0)
         {
             currentSetup = setupCards.Count - 1;
         }
@@ -121,7 +123,7 @@ public class CardParserTest : MonoBehaviour
     public void PreviousPunchline()
     {
         currentPunchline--;
-        if (currentPunchline <= 0)
+        if (currentPunchline < 0)
         {
             currentPunchline = punchlineCards.Count - 1;
         }
