@@ -4,6 +4,10 @@ namespace Sabelkalat
 {
     public class Card : MonoBehaviour
     {
+        [Range(0.05f, 0.8f)]
+        public float rotationSpeed = 0.2f;
+
+        [Header("Pose targets")]
         [Tooltip("The pose when this card is in view and focused.")]
         public Transform focusTarget = null;
 
@@ -20,26 +24,22 @@ namespace Sabelkalat
 
         public void Focus()
         {
-            if(hasFocus) return;
             Log($"Focusing {this}");
             hasFocus = true;
-            LeanTween.rotateLocal(gameObject, focusTarget.position, 1f).setEase(LeanTweenType.easeInOutQuad);
+            LeanTween.rotate(gameObject, focusTarget.transform.rotation.eulerAngles, rotationSpeed).setEaseInOutQuad();
         }
 
         public void Unfocus()
         {
-            if(!hasFocus) return;
             Log($"Unfocusing {this}");
             hasFocus = false;
-            LeanTween.rotateLocal(gameObject, holdTarget.position, 1f).setEase(LeanTweenType.easeInOutQuad);
+            LeanTween.rotate(gameObject, holdTarget.transform.rotation.eulerAngles, rotationSpeed).setEaseInOutQuad();
         }
 
         public void Hide()
         {
-            if(!hasFocus) return;
             Log($"Hiding {this}");
-            LeanTween.rotateLocal(gameObject, hiddenTarget.position, 1f).setEase(LeanTweenType.easeInOutQuad);
-            hasFocus = false;
+            LeanTween.rotate(gameObject, hiddenTarget.transform.rotation.eulerAngles, rotationSpeed).setEaseInOutQuad();
         }
 
         public void Show()
@@ -51,7 +51,7 @@ namespace Sabelkalat
             }
             else
             {
-                LeanTween.rotateLocal(gameObject, holdTarget.position, 1f).setEase(LeanTweenType.easeInOutQuad);
+                LeanTween.rotate(gameObject, holdTarget.transform.rotation.eulerAngles, rotationSpeed).setEaseInOutQuad();
             }
         }
 
