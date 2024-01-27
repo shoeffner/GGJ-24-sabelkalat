@@ -11,7 +11,6 @@ public class GameOrganizer : Singleton<GameOrganizer>
 
     public Audience audience;
     [SerializeField] private GameSetup gameSetup;
-    public int CurrentScore => currentScore;
 
     [Header("Music")]
     [SerializeField] private AudioSource basicTrack;
