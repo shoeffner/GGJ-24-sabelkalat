@@ -17,6 +17,8 @@ public class CardDealer : MonoBehaviour
 
     [Tooltip("Is called when the displayed cards text is changed.")]
     public UnityEvent<CardParser.SetupCard, CardParser.PunchlineCard> onCardsChanged;
+    [Tooltip("Is called when the cards are submitted.")]
+    public UnityEvent<CardParser.SetupCard, CardParser.PunchlineCard> onCardSubmitted;
 
     private CardParser cardParser;
 
@@ -129,5 +131,12 @@ public class CardDealer : MonoBehaviour
             currentPunchline = punchlineCards.Count - 1;
         }
         DisplayCurrentCards();
+    }
+
+    public void Submit()
+    {
+        var setup = setupCards[currentSetup];
+        var punchline = punchlineCards[currentPunchline];
+        onCardSubmitted.Invoke(setup, punchline);
     }
 }

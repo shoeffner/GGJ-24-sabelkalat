@@ -8,6 +8,7 @@ public class GameOrganizer : Singleton<GameOrganizer>
 
     [SerializeField] private GameSetup gameSetup;
     [SerializeField] public Audience audience;
+    public int CurrentScore => currentScore;
     private int currentScore = 0;
 
     private int currentRoundIndex = 0;
@@ -20,7 +21,10 @@ public class GameOrganizer : Singleton<GameOrganizer>
     public void AddScore(int score)
     {
         currentScore = Mathf.Clamp(currentScore + score, gameSetup.lowerScoreLimit, gameSetup.upperScoreLimit);
-        OnScoreChanged.Invoke(score);
+        if (OnScoreChanged != null)
+        {
+            OnScoreChanged.Invoke(score);
+        }
     }
 
     public int GetCurrentScore() => currentScore;
