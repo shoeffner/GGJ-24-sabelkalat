@@ -41,7 +41,7 @@ public class CardDealer : MonoBehaviour
     private void Setup()
     {
         cardParser = new CardParser();
-        cardParser.ReadFiles();
+        cardParser.ReadFiles(categoryReader);
 
     }
 
@@ -66,7 +66,9 @@ public class CardDealer : MonoBehaviour
             var setup = cardParser.GetRandomSetup();
             setupCards.Add(setup);
         }*/
-        setupCards = cardParser.GetRandomSetups(setupCardsCount, audienceCategories, categoryReader.categories, goodCards);
+        var allCategories = categoryReader.categories;
+
+        setupCards = cardParser.GetRandomSetups(setupCardsCount, audienceCategories, allCategories, goodCards);
 
         /*punchlineCards = new List<CardParser.PunchlineCard>();
         for (int i = 0; i < punchlineCardCount; i++)
@@ -74,7 +76,7 @@ public class CardDealer : MonoBehaviour
             var punchline = cardParser.GetRandomPunchline();
             punchlineCards.Add(punchline);
         }*/
-        punchlineCards = cardParser.GetRandomPunchlines(punchlineCardCount);
+        punchlineCards = cardParser.GetRandomPunchlines(punchlineCardCount, allCategories);
 
         currentSetup = 0;
         currentPunchline = 0;

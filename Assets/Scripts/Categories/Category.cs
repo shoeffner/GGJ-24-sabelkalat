@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Category
 {
     public string name;
     public bool isSetup;
     public Sprite icon;
-    public AudioClip [] sounds;
+    public AudioClip[] sounds;
 
     public Category(string name, bool isSetup)
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CardManager : MonoBehaviour
+/*public class CardManager : MonoBehaviour
 {
     private CardParser cardParser = new CardParser();
 
@@ -9,3 +9,4 @@ public class CardManager : MonoBehaviour
         cardParser.ReadFiles();
     }
 }
+*/

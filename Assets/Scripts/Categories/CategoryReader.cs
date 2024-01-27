@@ -8,12 +8,18 @@ public class CategoryReader : MonoBehaviour
     [SerializeField] private string setupFileName = "categoriesSetup.txt";
     [SerializeField] private string punchlineFileName = "categoriesPunchline.txt";
 
+#if UNITY_EDITOR
     public void OnValidate()
     {
+        if (Application.isPlaying)
+        {
+            return;
+        }
         categories = new List<Category>();
         LoadCategories(setupFileName, true);
         LoadCategories(punchlineFileName, false);
     }
+#endif
 
     private void LoadCategories(string fileName, bool isSetup)
     {

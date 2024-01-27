@@ -40,9 +40,9 @@ public class CardParserTest : MonoBehaviour
     public void DisplayCards(CardParser.SetupCard setup, CardParser.PunchlineCard punchline)
     {
         setupCardText.text = CardPrinter.GetSetupText(setup);
-        setupCardCategoriesText.text = $"+ {setup.noun.category}\n- {setup.counterCategory}";
+        setupCardCategoriesText.text = $"+ {setup.noun.category.name}\n- {setup.counterCategory.name}";
         punchlineCardText.text = CardPrinter.GetPunchlineText(setup, punchline);
-        punchlineCardCategoriesText.text = $"+ {punchline.category}\n- {punchline.counterCategory}";
+        punchlineCardCategoriesText.text = $"+ {punchline.goodCategory.name}\n- {punchline.counterCategory.name}";
     }
 
     // Test from editor
