@@ -790,10 +790,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4815522368256583151, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
-      propertyPath: m_NotificationBehavior
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6227473316254914127, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
       propertyPath: holdTarget
       value: 
