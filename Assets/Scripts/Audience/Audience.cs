@@ -22,10 +22,10 @@ public class Audience : MonoBehaviour
             Debug.LogError("Check viewers in audience object");
             return;
         }
+        CleanUpPreviousRound();
         audience = new List<Viewer>();
         // create viewers evenly per type
         int numberPerViewerType = viewerObjects.Count / viewerTypePrefabs.Count;
-        Debug.Log(numberPerViewerType);
         int viewerTypeIndex = 0;
         for (int i = 0; i < viewerObjects.Count; i++)
         {
@@ -33,9 +33,27 @@ public class Audience : MonoBehaviour
             {
                 viewerTypeIndex++;
             }
-            Viewer viewer = Instantiate(viewerTypePrefabs[Mathf.Min(viewerTypePrefabs.Count -1 ,viewerTypeIndex)], viewerObjects[i].transform);
+            Viewer viewer = Instantiate(viewerTypePrefabs[Mathf.Min(viewerTypePrefabs.Count - 1, viewerTypeIndex)], viewerObjects[i].transform);
             viewer.SetCategories(categoryReader.categories);
             audience.Add(viewer);
+        }
+    }
+
+    public void CleanUpPreviousRound()
+    {
+        if (audience != null)
+        {
+            foreach (var viewerObject in viewerObjects)
+            {
+                Viewer previousViewer = viewerObject.GetComponentInChildren<Viewer>();
+                if (previousViewer != null)
+                {
+                    LeanTween.scale(previousViewer.gameObject, Vector3.zero, 0.5f).setEase(LeanTweenType.easeInBack).setOnComplete(() =>
+                    {
+                        Destroy(previousViewer.gameObject);
+                    });
+                }
+            }
         }
     }
 
