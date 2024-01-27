@@ -4,36 +4,175 @@
             "category": "animal",
             "nouns": [
                 {
-                    "name": "cat",
+                    "name": "Cat",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "cute and fluffy"
-                },
-                {
-                    "name": "chicken",
+                    "adjective": "cute and fluffy",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Dog",
                     "sex": "n",
-                    "aan": "a"
-                },
-                {
-                    "name": "owl",
+                    "aan": "a",
+                    "adjective": "stupid",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Squirrel",
                     "sex": "n",
-                    "aan": "an"
-                }
+                    "aan": "a",
+                    "adjective": "cocaine induced",
+                    "aanAdjective": "a"
+                   }
             ]
         },
         {
-            "category": "human",
+            "category": "people",
             "nouns": [
                 {
-                    "name": "Paul",
+                    "name": "Grandpa",
                     "sex": "m",
-                    "aan": "a"
-                },
+                    "aan": "a",
+                    "adjective": "murderous",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Husband",
+                    "sex": "m",
+                    "aan": "a",
+                    "adjective": "cheating",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Wife",
+                    "sex": "m",
+                    "aan": "a",
+                    "adjective": "well-regared",
+                    "aanAdjective": "a"
+                   }
+            ]
+        },
+        {
+            "category": "tech",
+            "nouns": [
                 {
-                    "name": "Lara",
-                    "sex": "f",
-                    "aan": "a"
-                }
+                    "name": "Robot",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "hot",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Printer",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "whiny ass",
+                    "aanAdjective": "a"
+                   }
+            ]
+        },
+        {
+            "category": "health",
+            "nouns": [
+                {
+                    "name": "Chlamydia",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "raging",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Heroin",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "tremendous amount",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Bag of Weed",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "half-empty",
+                    "aanAdjective": "a"
+                   }
+            ]
+        },
+        {
+            "category": "food",
+            "nouns": [
+                {
+                    "name": "Hotdog",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "delicious",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Spaghetti",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "ominous",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "Skittle",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "extremly gross",
+                    "aanAdjective": "an"
+                   }
+            ]
+        },
+        {
+            "category": "tool",
+            "nouns": [
+                {
+                    "name": "Chainsaw",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "miniature",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Screwdriver",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "huge",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Scissor",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "sharp as hell",
+                    "aanAdjective": "a"
+                   }
+            ]
+        },
+        {
+            "category": "vehicle",
+            "nouns": [
+                {
+                    "name": "Bicycle",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "pink-ish",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "E-Scooter",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "super slow",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "Bobby Car",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "private",
+                    "aanAdjective": "a"
+                   }
             ]
         }
     ]

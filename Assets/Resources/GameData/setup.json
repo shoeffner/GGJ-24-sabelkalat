@@ -1,13 +1,67 @@
 {
     "cards": [
         {
-            "text": "The <noun> was a glorious thing"
-        },
-        {
-            "text": "The <noun> went across the street"
-        },
-        {
-            "text": "Why did <aan> <noun> cross the road?"
-        }
+            "text": "Once upon a time there was <aan> <adjective> <noun>"
+           },
+           {
+            "text": "My <noun> is something I hold very dear to my heart"
+           },
+           {
+            "text": "I like to smell someones <noun> after a long day"
+           },
+           {
+            "text": "<aan> <adjective> <noun> makes me happy"
+           },
+           {
+            "text": "You know sometimes I love talking to my neighbours <noun>"
+           },
+           {
+            "text": "I never expected to see <aan> <noun> in Toronto, Canada"
+           },
+           {
+            "text": "Sometimes - when no one is watching - I talk to my favorite <noun>"
+           },
+           {
+            "text": "My relationship to my parents <noun> is very fun, relaxed and easy-going"
+           },
+           {
+            "text": "An old man made a bad joke about <aan> <noun> in a tv show"
+           },
+           {
+            "text": "Questioning the moral of <aan> <adjective> <noun> is weird"
+           },
+           {
+            "text": "Combining 50 tons of TNT and <aan> <adjective> <noun> sounds hilarious"
+           },
+           {
+            "text": "Boiling <aan> <adjective> <noun> on a caribbean island creates a special flavour"
+           },
+           {
+            "text": "<aan> <adjective> <noun> under my lawnmower may result in absolut mayhem"
+           },
+           {
+            "text": "Frying <aan> <adjective> <noun> is not the best idea"
+           },
+           {
+            "text": "The crowd tonight reminds me of my <noun>"
+           },
+           {
+            "text": "<aan> <adjective> <noun> is one of the best hideouts for drugs in Albuquerque"
+           },
+           {
+            "text": "I never thought about moving to sweden with my <noun>"
+           },
+           {
+            "text": "<aan> <noun> is the cause of — and solution to — all of life's problem "
+           },
+           {
+            "text": "Throwing <aan> <adjective> <noun> on a minefield is my secret hobby"
+           },
+           {
+            "text": "Selling <aan> <adjective> <noun> before 7 AM is like comiting tax fraud on a Sunday morning"
+           },
+           {
+            "text": "I am the owner of <noun>.com"
+           }
     ]
 }

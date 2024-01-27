@@ -1,12 +1,62 @@
 {
     "cards": [
         {
-            "text": "because <pronoun> could.",
-            "category": "test"
-        },
-        {
-            "text": "to get to the other side.",
-            "category": "animal"
-        }
+            "text": "and <pronounSubjective> died. The End.",
+            "category": "accident"
+           },
+           {
+            "text": "well... <pronounSubjective> has been feeding me goddamn lies!"
+           },
+           {
+            "text": "from my experience I can tell you: Never lend money to <aan> <noun> while blackout drunk.",
+            "category": "moral"
+           },
+           {
+            "text": "<pronounSubjective> made me cringe."
+           },
+           {
+            "text": "I didn't want to hang <pronounObjective> but <pronounSubjective> left me no choice!",
+            "category": "action"
+           },
+           {
+            "text": "I made a pie out of <pronounObjective>. It contained a small amount of nuts."
+           },
+           {
+            "text": "<pronounSubjective> introduced me to <pronounPossessive> mother."
+           },
+           {
+            "text": "and <pronounSubjective> is.",
+            "category": "endingPhrase"
+           },
+           {
+            "text": "and for the record: I love <pronounObjective>.",
+            "category": "emotion"
+           },
+           {
+            "text": "<pronounSubjective> told me: \"You son of a gun! You did it!\"",
+            "category": "emotion"
+           },
+           {
+            "text": "I took <pronounObjective> and threw <pronounObjective> of <pronounPossessive> favorite bridge in Downtown, Atlanta"
+           },
+           {
+            "text": "I always say \"It could be worse\" you know?",
+            "category": "endingPhrase"
+           },
+           {
+            "text": "The moral of the story? Never challenge <aan> <noun> to a fist fight.",
+            "category": "moral"
+           },
+           {
+            "text": "because I just looove the taste of <noun> in the morning!",
+            "category": "explanation"
+           },
+           {
+            "text": "but I mean what is worse? Or bad case of diarrhea or <aan> <adjective> <noun>?"
+           },
+           {
+            "text": "And I think it is not a good idea, but it just works!",
+            "category": "endingPhrase"
+           }
     ]
 }
