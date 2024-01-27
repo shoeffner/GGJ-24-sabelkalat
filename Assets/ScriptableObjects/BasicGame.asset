@@ -15,13 +15,9 @@ MonoBehaviour:
   gameRounds:
   - viewers:
     - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
-    - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
-    - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
     correctAnswersScore: 1
     wrongAnswersScore: -0.5
   - viewers:
-    - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
-    - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
     - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
     correctAnswersScore: 1
     wrongAnswersScore: -0.5

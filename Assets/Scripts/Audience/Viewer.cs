@@ -14,12 +14,6 @@ public class Viewer : MonoBehaviour
     public Category CurrentCategory { get; private set; }
 
     private List<Category> categories;
-    private AudioSource audioSource;
-
-    private void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
     private void Start()
     {
@@ -43,11 +37,6 @@ public class Viewer : MonoBehaviour
         {
             CurrentCategory = categories[Random.Range(0, categories.Count)];
             thinkBubble.SetCategory(CurrentCategory);
-            if (CurrentCategory.sounds.Length > 0)
-            {
-                audioSource.pitch = Random.Range(0.8f, 1.2f);
-                audioSource.PlayOneShot(CurrentCategory.sounds[Random.Range(0, CurrentCategory.sounds.Length)]);
-            }
             yield return new WaitForSeconds(Random.Range(minCategoryChangeTime, maxCategoryChangeTime));
         }
     }

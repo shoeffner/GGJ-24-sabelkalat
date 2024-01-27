@@ -1,0 +1,7 @@
+weather
+emotion
+accident
+action
+endingPhrase
+moral
+explanation

@@ -6,7 +6,7 @@ public class ThinkBubble : MonoBehaviour
     private Vector3 thinkBubbleHolderScale;
     private SpriteRenderer categoryIcon;
     private Category nextCategory;
-    
+    private AudioSource audioSource;
 
     public void SetCategory(Category category)
     {
@@ -16,6 +16,7 @@ public class ThinkBubble : MonoBehaviour
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         categoryIcon = GetComponent<SpriteRenderer>();
         thinkBubbleHolderScale = thinkBubbleHolder.transform.localScale;
         thinkBubbleHolder.transform.localScale = Vector3.zero;
@@ -31,6 +32,18 @@ public class ThinkBubble : MonoBehaviour
     }
     public void ShowCategeory()
     {
-        LeanTween.scale(thinkBubbleHolder, thinkBubbleHolderScale, 0.5f).setEaseOutBack().setDelay(1f);
+        var delay = 1f;
+        PlaySound(delay);
+        LeanTween.scale(thinkBubbleHolder, thinkBubbleHolderScale, 0.5f).setEaseOutBack().setDelay(delay);
+    }
+
+    public void PlaySound(float delay)
+    {
+        if (nextCategory.sounds.Length > 0)
+        {
+            audioSource.pitch = Random.Range(0.8f, 1.2f);
+            audioSource.clip = nextCategory.sounds[Random.Range(0, nextCategory.sounds.Length)];
+            audioSource.PlayDelayed(delay);
+        }
     }
 }

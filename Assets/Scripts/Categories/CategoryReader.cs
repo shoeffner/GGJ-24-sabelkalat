@@ -5,9 +5,16 @@ public class CategoryReader : MonoBehaviour
 {
     public List<Category> categories;
 
-    [SerializeField] private string fileName = "categories.txt";
+    [SerializeField] private string setupFileName = "categoriesSetup.txt";
+    [SerializeField] private string punchlineFileName = "categoriesPunchline.txt";
 
     public void OnValidate()
+    {
+        LoadCategories(setupFileName, true);
+        LoadCategories(punchlineFileName, false);
+    }
+
+    private void LoadCategories(string fileName, bool isSetup)
     {
         if (string.IsNullOrEmpty(fileName))
         {
@@ -22,7 +29,7 @@ public class CategoryReader : MonoBehaviour
         var lines = System.IO.File.ReadAllLines(path);
         foreach (var line in lines)
         {
-            categories.Add(new Category(line));
+            categories.Add(new Category(line, isSetup));
         }
     }
 }
