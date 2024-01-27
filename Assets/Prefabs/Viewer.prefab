@@ -257,6 +257,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thinkBubbleHolder: {fileID: 4633672437231242295}
+  closeBubbleSounds:
+  - {fileID: 8300000, guid: dedb9ba62b4124cb1b534075a6171781, type: 3}
+  - {fileID: 8300000, guid: 805fc74401a3442f99a55c3e2ccd6f75, type: 3}
+  - {fileID: 8300000, guid: 7182e6b2ff1a541a6be387dd42c6e922, type: 3}
+  - {fileID: 8300000, guid: 5e786794e15a14079b3ed5c0e4389b40, type: 3}
+  - {fileID: 8300000, guid: 35839af53bca94f738fa9f2d14db0f48, type: 3}
+  - {fileID: 8300000, guid: 295c2808b173742f88e779bfe96d0c84, type: 3}
+  - {fileID: 8300000, guid: 27d2af667d8b143a299be28fb9ef7b3f, type: 3}
+  - {fileID: 8300000, guid: 82f6e1a61a8244745823fbfbe3019a1b, type: 3}
+  - {fileID: 8300000, guid: 2f3c5e1761aaf4a489526f1ae3aa28ab, type: 3}
+  - {fileID: 8300000, guid: 6df1ff9e0f75749ed9681b786796b2cd, type: 3}
+  - {fileID: 8300000, guid: 428899a965ed64687b4b7d807981fbcc, type: 3}
+  - {fileID: 8300000, guid: 5e6356507285d460791ce6aada9adc1c, type: 3}
+  - {fileID: 8300000, guid: 06436ba0e08544768a938a82363b8632, type: 3}
+  - {fileID: 8300000, guid: c86535fdc7adf4bdb96e2ce07c843ddc, type: 3}
+  - {fileID: 8300000, guid: af8722fe810d445a197c3dc239ee2a62, type: 3}
 --- !u!82 &8084543396485638099
 AudioSource:
   m_ObjectHideFlags: 0
