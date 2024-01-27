@@ -148,28 +148,31 @@ public class CardParser
         var setups = new List<SetupCard>();
         for (int i = 0; i < count; i++)
         {
-
+            Debug.Log($"Generating word {i}");
             for (int j = 0; j < CARD_ALREADY_EXIST_TRIES; j++)
             {
+                Debug.Log($"Try {j}");
                 var setup = GetRandomSetup();
                 bool isSetupUnique = true;
                 foreach (var otherSetup in setups)
                 {
-                    if (otherSetup.text != setup.text && otherSetup.noun != setup.noun)
+                    if (otherSetup.text == setup.text && otherSetup.noun == setup.noun)
                     {
+                        Debug.Log($"Found same {setup.text} | {setup.noun.name}");
                         isSetupUnique = false;
                         break;
                     }
                 }
                 if (isSetupUnique)
                 {
+                    Debug.Log($"is unique -> {setup.text} | {setup.noun.name}");
                     setups.Add(setup);
                     break;
                 }
             }
         }
         Debug.Log($"Found {setups.Count} setups");
-        return setupCards;
+        return setups;
     }
 
     public SetupCard GetRandomSetup()

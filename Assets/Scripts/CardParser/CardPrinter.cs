@@ -53,6 +53,7 @@ public class CardPrinter
             else
             {
                 Debug.LogError("After <aan> there is something else than a <noun> or <adjective>.");
+                Debug.Log($"{text}");
                 Debug.Log($"Next Noun: {nextNoun}");
                 Debug.Log($"Next Adjective: {nextAdjective}");
                 text = before + "<error>" + after;

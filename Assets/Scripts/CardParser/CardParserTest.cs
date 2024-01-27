@@ -58,12 +58,13 @@ public class CardParserTest : MonoBehaviour
 
     public void RegenerateCards()
     {
-        setupCards = new List<CardParser.SetupCard>();
+        /*setupCards = new List<CardParser.SetupCard>();
         for (int i = 0; i < setupCardsCount; i++)
         {
             var setup = cardParser.GetRandomSetup();
             setupCards.Add(setup);
-        }
+        }*/
+        setupCards = cardParser.GetRandomSetups(setupCardsCount);
 
         punchlineCards = new List<CardParser.PunchlineCard>();
         for (int i = 0; i < punchlineCardCount; i++)
