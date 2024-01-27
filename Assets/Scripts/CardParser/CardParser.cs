@@ -89,6 +89,9 @@ public class CardParser
 
     private List<PunchlineCard> punchlineCards;
 
+    // How many times we try to regenerate the card if it already exists.
+    private int CARD_ALREADY_EXIST_TRIES = 10;
+
 
     public void ReadFiles()
     {
@@ -135,6 +138,36 @@ public class CardParser
     {
         //return File.ReadAllText("Assets/Resources/" + path + ".json");
         return Resources.Load<TextAsset>(path).text;
+    }
+
+
+    public List<SetupCard> GetRandomSetups(int count)
+    {
+        var setups = new List<SetupCard>();
+        for (int i = 0; i < count; i++)
+        {
+
+            for (int j = 0; j < CARD_ALREADY_EXIST_TRIES; j++)
+            {
+                var setup = GetRandomSetup();
+                bool isSetupUnique = true;
+                foreach (var otherSetup in setups)
+                {
+                    if (otherSetup.text != setup.text && otherSetup.noun != setup.noun)
+                    {
+                        isSetupUnique = false;
+                        break;
+                    }
+                }
+                if (isSetupUnique)
+                {
+                    setups.Add(setup);
+                    break;
+                }
+            }
+        }
+        Debug.Log($"Found {setups.Count} setups");
+        return setupCards;
     }
 
     public SetupCard GetRandomSetup()

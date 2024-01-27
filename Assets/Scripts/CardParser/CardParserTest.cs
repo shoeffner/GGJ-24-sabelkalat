@@ -97,7 +97,7 @@ public class CardParserTest : MonoBehaviour
         }
         DisplayCurrentCards();
     }
-    
+
     public void PreviousSetup()
     {
         currentSetup--;
