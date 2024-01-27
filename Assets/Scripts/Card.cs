@@ -1,6 +1,8 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 namespace Sabelkalat
 {
@@ -29,6 +31,12 @@ namespace Sabelkalat
         [Tooltip("The pose when this card is swapped.")]
         public Transform swapTarget = null;
 
+        [Tooltip("Positive category holder")]
+        public Image positiveCategory = null;
+
+        [Tooltip("Negative category holder")]
+        public Image negativeCategory = null;
+
         private bool hasFocus = false;
 
         [Header("Diagnostics")]
@@ -44,6 +52,14 @@ namespace Sabelkalat
         void Awake()
         {
             textField = GetComponentInChildren<TextMeshProUGUI>();
+            if (positiveCategory == null)
+            {
+                Debug.LogError("No category holder for positive category");
+            }
+            if (negativeCategory == null)
+            {
+                Debug.LogError("No category holder for negative category");
+            }
         }
 
         public void OnCardsChanged(CardParser.SetupCard setupCard, CardParser.PunchlineCard punchlineCard)
@@ -80,11 +96,13 @@ namespace Sabelkalat
             string text = CardPrinter.GetSetupText(setupCard);
             if (swap)
             {
-                Swap(text);
+                Swap(text, setupCard.noun.category.icon, setupCard.counterCategory.icon);
             }
             else
             {
                 textField.text = text;
+                positiveCategory.sprite = setupCard.noun.category.icon;
+                negativeCategory.sprite = setupCard.counterCategory.icon;
             }
         }
 
@@ -93,11 +111,13 @@ namespace Sabelkalat
             string text = CardPrinter.GetPunchlineText(setupCard, punchlineCard);
             if (swap)
             {
-                Swap(text);
+                Swap(text, punchlineCard.goodCategory.icon, punchlineCard.counterCategory.icon);
             }
             else
             {
                 textField.text = text;
+                positiveCategory.sprite = punchlineCard.goodCategory.icon;
+                negativeCategory.sprite = punchlineCard.counterCategory.icon;
             }
         }
 
@@ -134,15 +154,21 @@ namespace Sabelkalat
             }
         }
 
-        private void Swap(string newText)
+        private void Swap(string newText, Sprite goodCategory, Sprite badCategory)
         {
             Log($"{this} got new text {newText}");
-            LeanTween.rotate(gameObject, swapTarget.transform.rotation.eulerAngles, rotationSpeed).setEaseInCirc().setOnComplete(UpdateTextAndShowCard, newText);
+            var args = (newText, goodCategory, badCategory);
+            LeanTween.rotate(gameObject, swapTarget.transform.rotation.eulerAngles, rotationSpeed)
+            .setEaseInCirc()
+            .setOnComplete(UpdateTextAndShowCard, args);
         }
 
-        private void UpdateTextAndShowCard(object newText)
+        private void UpdateTextAndShowCard(object args)
         {
-            textField.text = (string)newText;
+            var (newText, goodCategory, badCategory) = ((string, Sprite, Sprite))args;
+            textField.text = newText;
+            positiveCategory.sprite = goodCategory;
+            negativeCategory.sprite = badCategory;
             Show();
         }
 

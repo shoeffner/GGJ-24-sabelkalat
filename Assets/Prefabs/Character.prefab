@@ -387,46 +387,6 @@ PrefabInstance:
       propertyPath: hiddenTarget
       value: 
       objectReference: {fileID: 167817190761793823}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.1318
-      objectReference: {fileID: 0}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.4941
-      objectReference: {fileID: 0}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.2195
-      objectReference: {fileID: 0}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.66097605
-      objectReference: {fileID: 0}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.008561935
-      objectReference: {fileID: 0}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.74983793
-      objectReference: {fileID: 0}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.027937368
-      objectReference: {fileID: 0}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 1.752
-      objectReference: {fileID: 0}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -97.165
-      objectReference: {fileID: 0}
-    - target: {fileID: 978378116734311565, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 2.854
-      objectReference: {fileID: 0}
     - target: {fileID: 5311623095490994668, guid: 55a798ecd77304435a4939cfcf4fdb64, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.316
