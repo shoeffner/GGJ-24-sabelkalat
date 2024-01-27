@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Viewer : MonoBehaviour
 {
+    public bool ChangesCategory { get; set; } = true;
     [SerializeField, Range(1, 14)] private int minNumberOfCategories;
     [SerializeField, Range(1, 14)] private int maxNumberOfCategories;
     [SerializeField, Range(1, 60)] private float minCategoryChangeTime;
     [SerializeField, Range(1, 60)] private float maxCategoryChangeTime;
-    [SerializeField] private bool changeCategory = true;
     [SerializeField] ThinkBubble thinkBubble;
     public Category CurrentCategory { get; private set; }
 
@@ -33,7 +33,7 @@ public class Viewer : MonoBehaviour
 
     private IEnumerator ChangeCategory()
     {
-        while (changeCategory)
+        while (ChangesCategory)
         {
             CurrentCategory = categories[Random.Range(0, categories.Count)];
             thinkBubble.SetCategory(CurrentCategory);

@@ -49,4 +49,9 @@ public class Audience : MonoBehaviour
         return categories;
     }
 
+    public List<Viewer> GetViewers()
+    {
+        return audience;
+    }
+
 }
