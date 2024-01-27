@@ -138,7 +138,7 @@ public class CardParser
         {
             if (punchline.category == null)
             {
-                Debug.LogError($"Punchline {punchline.text} does not have a category assigned.");
+                Debug.LogWarning($"Punchline {punchline.text} does not have a category assigned.");
                 punchline.goodCategory = categoryReader.categories[0];
             }
             else
@@ -206,7 +206,7 @@ public class CardParser
                 return category;
             }
         }
-        Debug.LogError($"Could not find category isSetup: {isSetup}");
+        Debug.LogWarning($"Could not find category isSetup: {isSetup}");
         foreach (var category in categories)
         {
             Debug.Log($"- {category.name} isSetup: {category.isSetup}");
@@ -244,7 +244,7 @@ public class CardParser
     {
         if (!nouns.ContainsKey(category.name))
         {
-            Debug.LogError($"No nouns defined for category {category}.");
+            Debug.LogWarning($"No nouns defined for category {category}.");
             return GetCompletelyRandomNoun();
         }
         return nouns[category.name][Random.Range(0, nouns[category.name].Count)];
@@ -260,7 +260,7 @@ public class CardParser
     {
         if (!nouns.ContainsKey(category))
         {
-            Debug.LogError($"No nouns defined for category {category}.");
+            Debug.LogWarning($"No nouns defined for category {category}.");
             return GetCompletelyRandomNoun();
         }
         return nouns[category][Random.Range(0, nouns[category].Count)];

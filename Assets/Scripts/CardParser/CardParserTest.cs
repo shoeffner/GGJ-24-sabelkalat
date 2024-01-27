@@ -25,6 +25,7 @@ public class CardParserTest : MonoBehaviour
     void Start()
     {
         cardDealer.SetupIfNotYet();
+        Invoke("RegenerateCards", 0.1f);
     }
 
     public void RegenerateCards()

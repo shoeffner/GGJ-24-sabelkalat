@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &221654433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 679437172359695125, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
+  m_PrefabInstance: {fileID: 1210979800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd329486adfb4158a47ad4c79e8b225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &399198684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4670783821269827868, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
+  m_PrefabInstance: {fileID: 1210979800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd329486adfb4158a47ad4c79e8b225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &592952058
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,14 +271,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2023351021398523299, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3919172867908806240, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3919172867908806240, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -297,10 +311,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6172269781207349162, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
-      propertyPath: m_Mesh
-      value: 
+    - target: {fileID: 4815522368256583151, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7849522566416509282, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
+      propertyPath: cardDealer
+      value: 
+      objectReference: {fileID: 1837344299}
     - target: {fileID: 8465449690236645840, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
       propertyPath: m_Name
       value: Character
@@ -454,11 +472,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: useAllCategories
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 399198684}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 221654433}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnCardsChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnCardsChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Sabelkalat.Card, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Sabelkalat.Card, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+      propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+--- !u!114 &1837344299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
+  m_PrefabInstance: {fileID: 1536504714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce5b24d682b9a341851bda2b07b1948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

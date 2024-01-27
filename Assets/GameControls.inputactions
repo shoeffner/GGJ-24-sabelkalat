@@ -207,6 +207,17 @@
                     "action": "ConfirmCards",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c31b81c7-1125-4dcd-a0a2-e39ba577e947",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ConfirmCards",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

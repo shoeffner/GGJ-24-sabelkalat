@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minNumberOfCategories: 3
-  maxNumberOfCategories: 7
+  maxNumberOfCategories: 10
   minCategoryChangeTime: 5
   maxCategoryChangeTime: 7.74
   changeCategory: 1
