@@ -6,7 +6,7 @@ namespace Sabelkalat
 {
     enum ViewPoint
     {
-        Card, Audience
+        Undefined, Card, Audience
     }
 
     public class Character : MonoBehaviour
@@ -21,10 +21,11 @@ namespace Sabelkalat
         public Card leftCard = null;
         public Card rightCard = null;
 
+        public CardDealer cardDealer = null;
 
         #region Internal State
 
-        private ViewPoint currentViewPoint = ViewPoint.Audience;
+        private ViewPoint currentViewPoint = ViewPoint.Undefined;
         private Card focusedCard = null;
 
         #endregion Internal State
@@ -39,7 +40,8 @@ namespace Sabelkalat
 
         void Start()
         {
-            ActivateViewPoint(ViewPoint.Audience);
+            focusedCard = leftCard;
+            ActivateViewPoint(ViewPoint.Audience, true);
             EnsureLookAt();
         }
 
@@ -69,7 +71,7 @@ namespace Sabelkalat
         {
             if (currentViewPoint != ViewPoint.Card) return;
             var newFocusedCard = inputValue.Get<float>() < 0 ? leftCard : rightCard;
-            if (focusedCard != null && newFocusedCard != focusedCard)
+            if (newFocusedCard != focusedCard)
             {
                 focusedCard.Unfocus();
             }
@@ -84,16 +86,40 @@ namespace Sabelkalat
 
         void OnToggleCard(InputValue inputValue)
         {
+            if (currentViewPoint == ViewPoint.Audience || cardDealer == null) return;
+            var previous = inputValue.Get<float>() < 0;
 
+            if (focusedCard == leftCard)
+            {
+                if (previous)
+                {
+                    cardDealer.PreviousSetup();
+                }
+                else
+                {
+                    cardDealer.NextSetup();
+                }
+            }
+            else
+            {
+                if (previous)
+                {
+                    cardDealer.PreviousPunchline();
+                }
+                else
+                {
+                    cardDealer.NextPunchline();
+                }
+            }
         }
 
         #endregion Input Handlers
 
         #region Behaviour
 
-        void ActivateViewPoint(ViewPoint viewPoint)
+        void ActivateViewPoint(ViewPoint viewPoint, bool force = false)
         {
-            if (currentViewPoint == viewPoint) return;
+            if (currentViewPoint == viewPoint && !force) return;
             Debug.Log($"Switching to viewpoint {viewPoint}");
             switch (viewPoint)
             {
@@ -121,6 +147,10 @@ namespace Sabelkalat
             if (rightCard == null)
             {
                 Debug.LogError("No right card assigned!");
+            }
+            if (cardDealer == null)
+            {
+                Debug.LogError("No card dealer assigned!");
             }
         }
 
