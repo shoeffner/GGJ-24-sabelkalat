@@ -6,7 +6,10 @@ public class GameOverlayView : View
     [SerializeField] private Button _pauseGameButton;
     public override void Initialize()
     {
-        _pauseGameButton.onClick.AddListener(() => ViewManager.Instance.Show<PauseMenuView>());
+        _pauseGameButton.onClick.AddListener(() => {
+            Time.timeScale = 0;
+            ViewManager.Instance.Show<PauseMenuView>();
+            });
     }
     private void Update()
     {
