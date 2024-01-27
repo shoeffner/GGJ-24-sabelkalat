@@ -29,13 +29,17 @@ public class CardDealer : MonoBehaviour
     [Tooltip("How many of the cards are for the audience.")]
     public int goodCards = 2;
 
-
+    [Tooltip("Enable all categories for testing")]
+    public bool useAllCategories = false;
 
 
     public void Start()
     {
         SetupIfNotYet();
-        //RegenerateCards();
+        if (useAllCategories)
+        {
+            RegenerateCards(categoryReader.categories);
+        }
     }
 
     private void Setup()
