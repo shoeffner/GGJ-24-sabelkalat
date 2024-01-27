@@ -1,0 +1,40 @@
+{
+    "categories": [
+        {
+            "category": "animal",
+            "nouns": [
+                {
+                    "name": "cat",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "cute and fluffy"
+                },
+                {
+                    "name": "chicken",
+                    "sex": "n",
+                    "aan": "a"
+                },
+                {
+                    "name": "owl",
+                    "sex": "n",
+                    "aan": "an"
+                }
+            ]
+        },
+        {
+            "category": "human",
+            "nouns": [
+                {
+                    "name": "Paul",
+                    "sex": "m",
+                    "aan": "a"
+                },
+                {
+                    "name": "Lara",
+                    "sex": "f",
+                    "aan": "a"
+                }
+            ]
+        }
+    ]
+}

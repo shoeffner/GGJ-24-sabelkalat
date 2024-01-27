@@ -1,0 +1,13 @@
+{
+    "cards": [
+        {
+            "text": "The <noun> was a glorious thing"
+        },
+        {
+            "text": "The <noun> went across the street"
+        },
+        {
+            "text": "Why did <aan> <noun> cross the road?"
+        }
+    ]
+}
