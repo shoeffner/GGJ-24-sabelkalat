@@ -26,6 +26,8 @@ public class CardParser
         public string indefiniteArticle;
         [JsonProperty]
         public string adjective;
+        [JsonProperty("aanAdjective")]
+        public string indefiniteArticleAdjective;
         // Filled in at runtime.
         public string category;
     }
