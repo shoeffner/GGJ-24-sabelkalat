@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel.Design;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,7 +8,7 @@ namespace Sabelkalat
 {
     enum ViewPoint
     {
-        Undefined, Card, Audience
+        Undefined, Card, Audience, WaitForNextRound
     }
 
     public class Character : MonoBehaviour
@@ -27,6 +29,7 @@ namespace Sabelkalat
 
         private ViewPoint currentViewPoint = ViewPoint.Undefined;
         private Card focusedCard = null;
+        private PlayerInput playerInput = null;
 
         #endregion Internal State
 
@@ -40,6 +43,8 @@ namespace Sabelkalat
 
         void Start()
         {
+            playerInput = GetComponentInChildren<PlayerInput>();
+            playerInput.enabled = true;
             focusedCard = leftCard;
             ActivateViewPoint(ViewPoint.Audience, true);
             EnsureLookAt();
@@ -81,11 +86,15 @@ namespace Sabelkalat
 
         void OnConfirmCards()
         {
-
+            Debug.Log("Submitting!");
+            playerInput.enabled = false;
+            ActivateViewPoint(ViewPoint.WaitForNextRound, true);
+            // cardDealer.Submit();
         }
 
         void OnToggleCard(InputValue inputValue)
         {
+            Debug.Log("Toggle card");
             if (currentViewPoint == ViewPoint.Audience || cardDealer == null) return;
             var previous = inputValue.Get<float>() < 0;
 
@@ -115,12 +124,21 @@ namespace Sabelkalat
 
         #endregion Input Handlers
 
+        #region Callbacks
+
+        public void OnNextRound()
+        {
+            ActivateViewPoint(ViewPoint.Audience, true);
+            playerInput.enabled = true;
+        }
+
+        #endregion
+
         #region Behaviour
 
         void ActivateViewPoint(ViewPoint viewPoint, bool force = false)
         {
             if (currentViewPoint == viewPoint && !force) return;
-            Debug.Log($"Switching to viewpoint {viewPoint}");
             switch (viewPoint)
             {
                 case ViewPoint.Audience:
@@ -130,6 +148,10 @@ namespace Sabelkalat
                 case ViewPoint.Card:
                     leftCard.Show();
                     rightCard.Show();
+                    break;
+                case ViewPoint.WaitForNextRound:
+                    // leftCard.Lower();
+                    // rightCard.Lower();
                     break;
             }
             currentViewPoint = viewPoint;
