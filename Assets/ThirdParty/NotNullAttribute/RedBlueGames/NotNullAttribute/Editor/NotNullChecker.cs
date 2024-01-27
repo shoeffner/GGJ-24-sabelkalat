@@ -65,7 +65,7 @@
             }
 
             // Remove NotNullViolations for prefabs with IgnorePrefab
-            bool isObjectAPrefab = PrefabUtility.GetPrefabType(sourceMB.gameObject) == PrefabType.Prefab;
+            bool isObjectAPrefab = PrefabUtility.GetPrefabAssetType(sourceMB.gameObject) != PrefabAssetType.NotAPrefab;
             List<NotNullViolation> violationsToIgnore = new List<NotNullViolation>();
             if (isObjectAPrefab)
             {

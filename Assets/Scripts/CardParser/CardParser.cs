@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
 using Newtonsoft.Json;
 using System.Runtime.Serialization;
 
@@ -53,6 +51,7 @@ public class CardParser
 
         // Only filled in when the card is instantiated.
         public Noun noun;
+        public string counterCategory;
     }
 
     class SetupJson
@@ -67,12 +66,16 @@ public class CardParser
         public string text;
         [JsonProperty]
         public string category;
+
+        // Only filled in when the card is instantiated.
+        public string counterCategory;
     }
 
     class PunchlineJson
     {
         [JsonProperty]
         public List<PunchlineCard> cards;
+
     }
     private string nounFile = "GameData/nouns";
     private string setupFile = "GameData/setup";
@@ -128,7 +131,8 @@ public class CardParser
     }
 
 
-    private string ReadTextFile(string path) {
+    private string ReadTextFile(string path)
+    {
         //return File.ReadAllText("Assets/Resources/" + path + ".json");
         return Resources.Load<TextAsset>(path).text;
     }
