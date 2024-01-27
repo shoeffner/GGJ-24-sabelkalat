@@ -17,6 +17,9 @@ namespace Sabelkalat
         [Tooltip("The pose when this card is not in view.")]
         public Transform hiddenTarget = null;
 
+        [Tooltip("The pose when this card is swapped.")]
+        public Transform swapTarget = null;
+
         private bool hasFocus = false;
 
         [Header("Diagnostics")]
@@ -53,6 +56,11 @@ namespace Sabelkalat
             {
                 LeanTween.rotate(gameObject, holdTarget.transform.rotation.eulerAngles, rotationSpeed).setEaseInOutQuad();
             }
+        }
+
+        public void Swap()
+        {
+            LeanTween.rotate(gameObject, swapTarget.transform.rotation.eulerAngles, rotationSpeed).setEaseInCirc().setOnComplete(Show);
         }
 
         private void Log(string msg)
