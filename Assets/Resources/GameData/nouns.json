@@ -4,24 +4,66 @@
             "category": "animal",
             "nouns": [
                 {
-                    "name": "Cat",
-                    "sex": "n",
+                    "name": "cat",
+                    "sex": "f",
                     "aan": "a",
                     "adjective": "cute and fluffy",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Dog",
-                    "sex": "n",
+                    "name": "dachshund",
+                    "sex": "m",
                     "aan": "a",
                     "adjective": "stupid",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Squirrel",
+                    "name": "squirrel",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "cocaine induced",
+                    "adjective": "coked up",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "capybara",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "nearsighted",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "giraffe",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "shortnecked",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "pigeon",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "way too big",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "ostrich",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "insanely ambitious",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "blobfish",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "kind of handsome",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "chameleon",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "five-legged",
                     "aanAdjective": "a"
                    }
             ]
@@ -30,24 +72,66 @@
             "category": "people",
             "nouns": [
                 {
-                    "name": "Grandpa",
+                    "name": "grandpa",
                     "sex": "m",
                     "aan": "a",
                     "adjective": "murderous",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Husband",
+                    "name": "husband",
                     "sex": "m",
                     "aan": "a",
                     "adjective": "cheating",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Wife",
-                    "sex": "m",
+                    "name": "wife",
+                    "sex": "f",
                     "aan": "a",
                     "adjective": "well-regared",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "professor",
+                    "sex": "m",
+                    "aan": "a",
+                    "adjective": "wannabe",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "gandma",
+                    "sex": "f",
+                    "aan": "a",
+                    "adjective": "gilf-y",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "gardener",
+                    "sex": "m",
+                    "aan": "a",
+                    "adjective": "massive",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "teacher",
+                    "sex": "f",
+                    "aan": "a",
+                    "adjective": "lovecraftian",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "bodybuilder",
+                    "sex": "m",
+                    "aan": "a",
+                    "adjective": "insanely short",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "accountant",
+                    "sex": "m",
+                    "aan": "an",
+                    "adjective": "suspicious",
                     "aanAdjective": "a"
                    }
             ]
@@ -56,17 +140,66 @@
             "category": "tech",
             "nouns": [
                 {
-                    "name": "Robot",
+                    "name": "robot",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "hot",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Printer",
+                    "name": "printer",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "whiny ass",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "microwave",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "incontinent",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "hairdryer",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "mindblowing",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "air-conditioner",
+                    "sex": "n",
+                    "aan": "an",
+                    "adjective": "malfunctioning",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "trimmer",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "embarrassing",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "shaver",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "rough",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "radio",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "speechless",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "vacuum cleaner",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "dedicated",
                     "aanAdjective": "a"
                    }
             ]
@@ -75,24 +208,66 @@
             "category": "health",
             "nouns": [
                 {
-                    "name": "Chlamydia",
+                    "name": "chlamydia",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "raging",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Heroin",
+                    "name": "heroin",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "tremendous amount",
+                    "adjective": "tremendous amount of",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Bag of Weed",
+                    "name": "weed",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "half-empty",
+                    "adjective": "half-empty bag of",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "meth",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "cheap",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "ketamin",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "way too large dosis of",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "cough syrup",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "salty",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "placebo",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "intensive",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "aspirin",
+                    "sex": "n",
+                    "aan": "an",
+                    "adjective": "impure",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "laxative",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "dynamic",
                     "aanAdjective": "a"
                    }
             ]
@@ -101,24 +276,66 @@
             "category": "food",
             "nouns": [
                 {
-                    "name": "Hotdog",
+                    "name": "hotdog",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "delicious",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Spaghetti",
+                    "name": "spaghetti",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "ominous",
+                    "adjective": "ominous plate of",
                     "aanAdjective": "an"
                    },
                    {
-                    "name": "Skittle",
+                    "name": "skittle",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "extremly gross",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "sauce",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "fishy",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "soda",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "out of gas",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "cake",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "squishy",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "nugget",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "superior piece of chicken",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "bubble tea",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "condensed",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "cheese",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "obnoxious",
                     "aanAdjective": "an"
                    }
             ]
@@ -127,24 +344,66 @@
             "category": "tool",
             "nouns": [
                 {
-                    "name": "Chainsaw",
+                    "name": "chainsaw",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "miniature",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Screwdriver",
+                    "name": "screwdriver",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "huge",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Scissor",
+                    "name": "scissor",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "sharp as hell",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "hammer",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "extremely hard",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "pickaxe",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "hyperactive",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "lawnmower",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "shy",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "shovel",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "fancy",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "drill",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "horny",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "grinder",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "non-hetero",
                     "aanAdjective": "a"
                    }
             ]
@@ -153,24 +412,66 @@
             "category": "vehicle",
             "nouns": [
                 {
-                    "name": "Bicycle",
+                    "name": "bicycle",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "pink-ish",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "E-Scooter",
+                    "name": "e-scooter",
                     "sex": "n",
                     "aan": "a",
                     "adjective": "super slow",
                     "aanAdjective": "a"
                    },
                    {
-                    "name": "Bobby Car",
+                    "name": "bobby car",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "private",
+                    "adjective": "privately owned",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "tractor",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "progressive",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "bus",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "people-hating",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "boat",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "picky",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "plane",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "bloodthirsty",
+                    "aanAdjective": "a"
+                   },
+                   {
+                    "name": "tank",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "impulsive",
+                    "aanAdjective": "an"
+                   },
+                   {
+                    "name": "harvester",
+                    "sex": "n",
+                    "aan": "a",
+                    "adjective": "hysterical",
                     "aanAdjective": "a"
                    }
             ]
