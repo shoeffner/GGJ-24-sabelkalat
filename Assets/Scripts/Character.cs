@@ -1,6 +1,3 @@
-using System;
-using System.ComponentModel.Design;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
