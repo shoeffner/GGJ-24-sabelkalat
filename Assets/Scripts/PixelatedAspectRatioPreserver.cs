@@ -17,7 +17,7 @@ public class PixelatedAspectRatioPreserver : MonoBehaviour
     {
         if (Screen.width != width || Screen.height != height)
         {
-            Debug.Log("Screen size changed.");
+            //Debug.Log("Screen size changed.");
             width = Screen.width;
             height = Screen.height;
             float aspectRatio = (float)width / height;
