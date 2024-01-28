@@ -50,10 +50,7 @@ public class GameEndOrchestrator : MonoBehaviour
         yield return new WaitForSeconds(curtain.moveDuration);
         Debug.Log("Showing menu");
 
-        TransitionManager.Instance.TransitionScenes(() =>
-        {
-            ViewManager.Instance.Show<GameWinView>();
-        });
+        ViewManager.Instance.Show<GameWinView>();
     }
 
     private void OnGameLose()
@@ -63,8 +60,6 @@ public class GameEndOrchestrator : MonoBehaviour
 
     private IEnumerator GameLoseCoroutine()
     {
-
-
         Debug.Log("Play lose sound");
         gameEndAudio.clip = loseSounds[Random.Range(0, loseSounds.Length)];
         gameEndAudio.loop = false;
@@ -80,7 +75,7 @@ public class GameEndOrchestrator : MonoBehaviour
         Debug.Log("Showing menu");
         TransitionManager.Instance.TransitionScenes(() =>
         {
-            ViewManager.Instance.Show<GameWinView>();
+            ViewManager.Instance.Show<GameLoseView>();
         });
 
     }
