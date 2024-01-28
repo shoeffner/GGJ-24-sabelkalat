@@ -232,7 +232,7 @@
                     "name": "meth",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "cheap",
+                    "adjective": "cheap ass",
                     "aanAdjective": "a"
                    },
                    {
@@ -253,7 +253,7 @@
                     "name": "placebo",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "intensive",
+                    "adjective": "intense",
                     "aanAdjective": "an"
                    },
                    {
@@ -267,7 +267,7 @@
                     "name": "laxative",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "dynamic",
+                    "adjective": "very well working",
                     "aanAdjective": "a"
                    }
             ]
@@ -369,7 +369,7 @@
                     "sex": "n",
                     "aan": "a",
                     "adjective": "extremely hard",
-                    "aanAdjective": "a"
+                    "aanAdjective": "an"
                    },
                    {
                     "name": "pickaxe",
@@ -421,7 +421,7 @@
                    {
                     "name": "e-scooter",
                     "sex": "n",
-                    "aan": "a",
+                    "aan": "an",
                     "adjective": "super slow",
                     "aanAdjective": "a"
                    },
@@ -436,7 +436,7 @@
                     "name": "tractor",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "progressive",
+                    "adjective": "fairly progressive",
                     "aanAdjective": "a"
                    },
                    {
@@ -464,15 +464,8 @@
                     "name": "tank",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "impulsive",
+                    "adjective": "impulsivly acting",
                     "aanAdjective": "an"
-                   },
-                   {
-                    "name": "harvester",
-                    "sex": "n",
-                    "aan": "a",
-                    "adjective": "hysterical",
-                    "aanAdjective": "a"
                    }
             ]
         }

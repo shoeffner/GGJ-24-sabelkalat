@@ -94,8 +94,7 @@
            },
            {
             "text": "It snowed heavily this morning so I decided to bury <pronounObjective> alive while laughing hysterically. ",
-            "category": "weather",
-            "Column3": "X"
+            "category": "weather"
            },
            {
             "text": "but my NDA prohibits me from talking about <pronounObjective> in any detail.",
@@ -111,10 +110,6 @@
            },
            {
             "text": "Which is why I used to say \"<noun> always happens when it's raining\".",
-            "category": "weather"
-           },
-           {
-            "text": "<pronounSubjective> brings me as much happiness as rope skipping during a devastating level 10 earthquake.",
             "category": "weather"
            },
            {
@@ -138,7 +133,7 @@
             "category": "moral"
            },
            {
-            "text": "<pronounSubjective> killed his first-born son. AND I JUST WATCHED.",
+            "text": "<pronounSubjective> killed <pronounPossessive> first-born son. AND I JUST WATCHED.",
             "category": "accident"
            },
            {
@@ -154,11 +149,11 @@
             "category": "moral"
            },
            {
-            "text": "I had to left <pronounObjective> in france with all those French people.",
+            "text": "I had to leave <pronounObjective> in france with all those French people.",
             "category": "endingPhrase"
            },
            {
-            "text": "<pronounSubjective> stands outside. So if anyone asks, I'ts outstanding.",
+            "text": "<pronounSubjective> stands outside. So if anyone asks: I wasn't here!",
             "category": "weather"
            },
            {
@@ -166,7 +161,7 @@
             "category": "endingPhrase"
            },
            {
-            "text": "but you can read more about <aan> <noun> on our website. ",
+            "text": "but you can read more about my <adjective> <noun> on my website. ",
             "category": "endingPhrase"
            },
            {
@@ -198,7 +193,7 @@
             "category": "explanation"
            },
            {
-            "text": "accordingly I ALWAYS drink a bit glass of mixed <noun> in the morning.",
+            "text": "accordingly I ALWAYS drink a glass of mixed <noun> in the morning.",
             "category": "explanation"
            },
            {
@@ -214,7 +209,7 @@
             "category": "explanation"
            },
            {
-            "text": "Sometimes the only way to loose <aan> <noun> is to make <aan> <adjective> <noun> yourself.",
+            "text": "Sometimes the only way to get <aan> <noun> is to make <aan> <adjective> <noun> yourself.",
             "category": "moral"
            },
            {
