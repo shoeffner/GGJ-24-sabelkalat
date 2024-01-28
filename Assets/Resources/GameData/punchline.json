@@ -5,27 +5,31 @@
             "category": "accident"
            },
            {
-            "text": "well... <pronounSubjective> has been feeding me goddamn lies!"
+            "text": "well... <pronounSubjective> has been feeding me goddamn lies!",
+            "category": "emotion"
            },
            {
             "text": "from my experience I can tell you: Never lend money to <aan> <noun> while blackout drunk.",
             "category": "moral"
            },
            {
-            "text": "<pronounSubjective> made me cringe."
+            "text": "<pronounSubjective> made me cringe.",
+            "category": "endingPhrase"
            },
            {
             "text": "I didn't want to hang <pronounObjective> but <pronounSubjective> left me no choice!",
             "category": "action"
            },
            {
-            "text": "I made a pie out of <pronounObjective>. It contained a small amount of nuts."
+            "text": "I made a pie out of <pronounObjective>. It contained a small amount of nuts.",
+            "category": "action"
            },
            {
-            "text": "<pronounSubjective> introduced me to <pronounPossessive> mother."
+            "text": "<pronounSubjective> introduced me to <pronounPossessive> mother.",
+            "category": "action"
            },
            {
-            "text": "and <pronounSubjective> is.",
+            "text": "and I truly think <pronounSubjective> is.",
             "category": "endingPhrase"
            },
            {
@@ -37,14 +41,15 @@
             "category": "emotion"
            },
            {
-            "text": "I took <pronounObjective> and threw <pronounObjective> of <pronounPossessive> favorite bridge in Downtown, Atlanta"
+            "text": "I took <pronounObjective> and threw <pronounObjective> of <pronounPossessive> favorite bridge in Downtown, Atlanta.",
+            "category": "action"
            },
            {
             "text": "I always say \"It could be worse\" you know?",
             "category": "endingPhrase"
            },
            {
-            "text": "The moral of the story? Never challenge <aan> <noun> to a fist fight.",
+            "text": "The moral of the story? Never challenge <aan> <adjective> <noun> to a fist fight.",
             "category": "moral"
            },
            {
@@ -52,11 +57,176 @@
             "category": "explanation"
            },
            {
-            "text": "but I mean what is worse? Or bad case of diarrhea or <aan> <adjective> <noun>?"
+            "text": "but I mean what is worse? Or bad case of diarrhea or <aan> <adjective> <noun>?",
+            "category": "endingPhrase"
            },
            {
-            "text": "And I think it is not a good idea, but it just works!",
+            "text": "and I don't think it's a good idea, but it works!",
             "category": "endingPhrase"
+           },
+           {
+            "text": "but <pronounSubjective> still refuses to sell me drugs.",
+            "category": "endingPhrase"
+           },
+           {
+            "text": "I ran over <pronounObjective> with my car and turned backwards to make sure <pronounSubjective> stays dead.",
+            "category": "accident"
+           },
+           {
+            "text": "For the most time I kiss <pronounObjective> gently and tell <pronounObjective> all my dirty little secrets.",
+            "category": "emotion"
+           },
+           {
+            "text": "Anyway I wished me and <noun> would have started dating way sooner.",
+            "category": "emotion"
+           },
+           {
+            "text": "<pronounSubjective> looked like a budget version of Bruce Willis.",
+            "category": "endingPhrase"
+           },
+           {
+            "text": "<noun> never tested for STDs before we did it and I couldn't care less. I love <pronounObjective>.",
+            "category": "emotion"
+           },
+           {
+            "text": "I took <pronounObjective> and whispered in <pronounPossessive> ears: \"I'm going to treat you like a princess\".",
+            "category": "emotion"
+           },
+           {
+            "text": "It snowed heavily this morning so I decided to bury <pronounObjective> alive while laughing hysterically. ",
+            "category": "weather"
+           },
+           {
+            "text": "but my NDA prohibits me from talking about <pronounObjective> in any detail.",
+            "category": "endingPhrase"
+           },
+           {
+            "text": "but <pronounSubjective> was violently burned by the heat of the sun.",
+            "category": "weather"
+           },
+           {
+            "text": "but when my precious <noun> broke up with me? I couldn't help but weep like a little baby.",
+            "category": "emotion"
+           },
+           {
+            "text": "Which is why I used to say \"<noun> always happens when it's raining\".",
+            "category": "weather"
+           },
+           {
+            "text": "I did a remix of \"Here comes the sun\" and called it \"Here comes the <adjective> <noun>\".",
+            "category": "weather"
+           },
+           {
+            "text": "but all my forecasts were about <aan> <adjective> <noun> in hell.",
+            "category": "weather"
+           },
+           {
+            "text": "<noun> was not excited when I cut off BOTH of <pronounPossessive> leg.",
+            "category": "accident"
+           },
+           {
+            "text": "We wanted to make paper planes but I slipped, cut <pronounObjective> into small pieces and felt guilty afterwards.",
+            "category": "accident"
+           },
+           {
+            "text": "Never trust a <noun> when <pronounSubjective> tells you to go to the woods at night and start a blood ritual to summon demons.",
+            "category": "moral"
+           },
+           {
+            "text": "<pronounSubjective> killed <pronounPossessive> first-born son. AND I JUST WATCHED.",
+            "category": "accident"
+           },
+           {
+            "text": "but I slipped and crushed <pronounPossessive> skull if you know what I mean.",
+            "category": "accident"
+           },
+           {
+            "text": "What I'm saying is: Don't sleep with you coworker's <noun> until they discussed this whole cuckolding situation.",
+            "category": "moral"
+           },
+           {
+            "text": "and the moral of the story: Don’t touch the <noun>.",
+            "category": "moral"
+           },
+           {
+            "text": "I had to leave <pronounObjective> in france with all those French people.",
+            "category": "endingPhrase"
+           },
+           {
+            "text": "<pronounSubjective> stands outside. So if anyone asks: I wasn't here!",
+            "category": "weather"
+           },
+           {
+            "text": "but <pronounSubjective> is not a dad <noun> — it’s a <noun>'s father ! ",
+            "category": "endingPhrase"
+           },
+           {
+            "text": "but you can read more about my <adjective> <noun> on my website. ",
+            "category": "endingPhrase"
+           },
+           {
+            "text": "but I enjoy stuffing my <noun> with tic tacs. ",
+            "category": "endingPhrase"
+           },
+           {
+            "text": "Tragically <pronounSubjective> drowned while trying to save a puppy.",
+            "category": "accident"
+           },
+           {
+            "text": "No one could have predicted that <aan> <adjective> <noun> would murder an entire family in cold-blooded fashion.",
+            "category": "accident"
+           },
+           {
+            "text": "Call me Heihachi Mishima cuz' I threw that mf into an active volcano.",
+            "category": "weather"
+           },
+           {
+            "text": "because once in a while I need me some <adjective> <noun>.",
+            "category": "explanation"
+           },
+           {
+            "text": "because the only shoes that fit me are those that fit my <noun>.",
+            "category": "explanation"
+           },
+           {
+            "text": "for the simple reason that <aan> <noun> a day keeps the law enforcement away.",
+            "category": "explanation"
+           },
+           {
+            "text": "accordingly I ALWAYS drink a glass of mixed <noun> in the morning.",
+            "category": "explanation"
+           },
+           {
+            "text": "due to that I usually swallow my <noun> whole. ",
+            "category": "explanation"
+           },
+           {
+            "text": "because there is a saying \"Ones <noun> is another ones treasure\".",
+            "category": "explanation"
+           },
+           {
+            "text": "for the sole fact that <pronounSubjective> gifted me three wonderful children.",
+            "category": "explanation"
+           },
+           {
+            "text": "Sometimes the only way to get <aan> <noun> is to make <aan> <adjective> <noun> yourself.",
+            "category": "moral"
+           },
+           {
+            "text": "When I think about it: I should probably dispose of <pronounSubjective> in the trash.",
+            "category": "action"
+           },
+           {
+            "text": "I married <pronounObjective> without second-guessing it!",
+            "category": "action"
+           },
+           {
+            "text": "Now and then I enjoy to put <pronounSubjective> in the oven and to see what happens.",
+            "category": "action"
+           },
+           {
+            "text": "So let me tell you the tragedy of Darth Plagueis the <adjective> <noun>.",
+            "category": "action"
            }
     ]
 }
