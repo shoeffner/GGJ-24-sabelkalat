@@ -53,8 +53,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e4642c574e8498d46b92af0c714ddac9, type: 3}
   gameWinDelay: 12
   winSounds:
-  - {fileID: 8300000, guid: b1479e70d03babe46be81f6e9f607499, type: 3}
-  - {fileID: 8300000, guid: 94f62d4fe389e5f4fb1fff4df63878c0, type: 3}
+  - {fileID: 8300000, guid: 808e00245199c0b45923f48dc4e9c004, type: 3}
+  - {fileID: 8300000, guid: d0de895564b27ff448bbdd6c0bb3334b, type: 3}
 --- !u!82 &5978323914279762187
 AudioSource:
   m_ObjectHideFlags: 0
