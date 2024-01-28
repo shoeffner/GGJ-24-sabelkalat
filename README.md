@@ -11,21 +11,27 @@ Use the arrow keys (or WASD) to focus your cards and swap them, tell the joke wi
 
 ## Credits
 
-**Game Design**
-Sam Matsa (einfuehlsam)
-Etienne Theurer (GranatenGecko)
+### Game Design
 
-**Art**
-Katja Kollischon
-Ares Gruber
+- Sam Matsa (einfuehlsam)
+- Etienne Theurer (GranatenGecko)
 
-**Audio**
-Magnus Reichel
 
-**Code**
-bitowl
-Tobias Lauxmann (YoghurtDrop)
-Sebastian Höffner (shoeffner)
+### Art
+
+- Katja Kollischon
+- Ares Gruber
+
+
+### Audio
+
+- Magnus Reichel
+
+### Code
+
+- bitowl
+- Tobias Lauxmann (YoghurtDrop)
+- Sebastian Höffner (shoeffner)
 
 
 ## License
