@@ -199,6 +199,17 @@
                 },
                 {
                     "name": "",
+                    "id": "2f296ffd-9a57-4cdc-8ac4-f08915822230",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleView",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "2ace8bde-ac7d-4b50-bd01-24a2f86b691d",
                     "path": "<Keyboard>/space",
                     "interactions": "",
