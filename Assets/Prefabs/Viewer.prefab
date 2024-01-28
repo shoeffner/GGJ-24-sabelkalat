@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8ec2e13594fb147ae2a34ca60a79e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minNumberOfCategories: 3
-  maxNumberOfCategories: 10
-  minCategoryChangeTime: 5
-  maxCategoryChangeTime: 7.74
+  minNumberOfCategories: 4
+  maxNumberOfCategories: 8
+  minCategoryChangeTime: 15
+  maxCategoryChangeTime: 30
   thinkBubble: {fileID: 3752570165350294342}
 --- !u!1 &6726768976173610090
 GameObject:
