@@ -34,7 +34,7 @@ public class ScoreCalculator : MonoBehaviour
             }
         }
 
-        Debug.Log($"Score change: {score}");
+        //Debug.Log($"Score change: {score}");
         GameOrganizer.Instance.AddScore(score);
     }
 }

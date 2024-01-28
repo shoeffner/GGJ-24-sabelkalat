@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ButtonSound : MonoBehaviour
 {
     [SerializeField] private AudioClip hoverSound;
-    [SerializeField] private AudioClip clickSound;
+    [SerializeField] private List<AudioClip> clickSounds;
     private AudioSource audioSource;
 
     private void Awake()
@@ -24,7 +24,7 @@ public class ButtonSound : MonoBehaviour
 
         foreach (Button b in FindObjectsOfType<Button>(true))
         {
-            b.onClick.AddListener(() => audioSource.PlayOneShot(clickSound));
+            b.onClick.AddListener(() => audioSource.PlayOneShot(clickSounds[Random.Range(0, clickSounds.Count)]));
             b.gameObject.AddComponent<EventTrigger>();
             b.gameObject.GetComponent<EventTrigger>().triggers.Add(eventtype);
         }

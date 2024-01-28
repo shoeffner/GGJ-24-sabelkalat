@@ -36,9 +36,38 @@ public class CardDealer : MonoBehaviour
     public bool useAudienceCategories = false;
 
 
+    void OnEnable()
+    {
+        if (useAllCategories || useAudienceCategories)
+        {
+            GameOrganizer.Instance.OnNextRound += OnNextRound;
+        }
+    }
+
+    void OnDisable()
+    {
+        if (useAllCategories || useAudienceCategories)
+        {
+            GameOrganizer.Instance.OnNextRound -= OnNextRound;
+        }
+    }
+
     public void Start()
     {
         SetupIfNotYet();
+        if (useAllCategories)
+        {
+            RegenerateCards(categoryReader.categories);
+        }
+        else if (useAudienceCategories)
+        {
+            RegenerateCards(GameOrganizer.Instance.audience.GetCurrentAudienceCategories());
+        }
+    }
+
+    private void OnNextRound()
+    {
+        Debug.Log("----- on next round");
         if (useAllCategories)
         {
             RegenerateCards(categoryReader.categories);

@@ -228,8 +228,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bd329486adfb4158a47ad4c79e8b225, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &170063440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,15 +318,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
       propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
+      value:
       objectReference: {fileID: 303249409}
     - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
       propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
+      value:
       objectReference: {fileID: 57606582}
     - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
       propertyPath: onCardSubmitted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
+      value:
       objectReference: {fileID: 2088866249}
     - target: {fileID: 4485652851829891000, guid: f45d747b97b564b86994c7e41e24a8dc, type: 3}
       propertyPath: onCardsChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
@@ -497,8 +497,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4afd5ab8062cee94d81c3506eca09ee5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   comedianSounds:
   - {fileID: 8300000, guid: 16a190c8d51dfb34e878c93b17dd0f60, type: 3}
   - {fileID: 8300000, guid: 5cc6fdcb21396fa4eb7ca1577b018e76, type: 3}
@@ -627,8 +627,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bd329486adfb4158a47ad4c79e8b225, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &462334687
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,8 +656,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c16f619d866154796b9448197fcdf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   viewerObjects:
   - {fileID: 525908619}
   - {fileID: 1903050283}
@@ -731,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7849522566416509282, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
       propertyPath: cardDealer
-      value: 
+      value:
       objectReference: {fileID: 2012515002}
     - target: {fileID: 8465449690236645840, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
       propertyPath: m_Name
@@ -751,8 +751,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69178ee906026304191f5a98e8d5c1bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &525908619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1417a182bbfac7c4091fdcd59bf90f10, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1417a182bbfac7c4091fdcd59bf90f10, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1041,7 +1041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1417a182bbfac7c4091fdcd59bf90f10, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1417a182bbfac7c4091fdcd59bf90f10, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1224,7 +1224,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1219991694846025198, guid: d9b775eaa66490e4fba85e0a195f9877, type: 3}
       propertyPath: audience
-      value: 
+      value:
       objectReference: {fileID: 462334688}
     - target: {fileID: 1219991694846025198, guid: d9b775eaa66490e4fba85e0a195f9877, type: 3}
       propertyPath: timeBetweenRounds
@@ -1444,8 +1444,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
@@ -1487,8 +1487,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ce5b24d682b9a341851bda2b07b1948, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &2039538254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1604,7 +1604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1417a182bbfac7c4091fdcd59bf90f10, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1417a182bbfac7c4091fdcd59bf90f10, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1649,8 +1649,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6e8c8b4f479ca547945ad2d859cd453, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &2132772786
 PrefabInstance:
   m_ObjectHideFlags: 0
