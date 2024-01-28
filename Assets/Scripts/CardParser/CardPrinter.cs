@@ -25,7 +25,7 @@ public class CardPrinter
     public static string GetSetupText(CardParser.SetupCard setupCard)
     {
         var text = ReplaceNounPlaceholders(setupCard.text, setupCard.noun);
-    
+
         if (!string.IsNullOrEmpty(text))
         {
             // Make the first letter uppercase
@@ -56,7 +56,7 @@ public class CardPrinter
             {
                 if (noun.indefiniteArticle == null)
                 {
-                    Debug.LogError($"Noun {noun.name} does not have aan defined!");
+                    Debug.LogWarning($"Noun {noun.name} does not have aan defined!");
                     noun.indefiniteArticle = "a";
                 }
                 text = before + noun.indefiniteArticle + after;
@@ -65,14 +65,14 @@ public class CardPrinter
             {
                 if (noun.indefiniteArticleAdjective == null)
                 {
-                    Debug.LogError($"The adjective {noun.adjective} of noun {noun.name} does not have aan defined!");
+                    Debug.LogWarning($"The adjective {noun.adjective} of noun {noun.name} does not have aan defined!");
                     noun.indefiniteArticleAdjective = "a";
                 }
                 text = before + noun.indefiniteArticleAdjective + after;
             }
             else
             {
-                Debug.LogError("After <aan> there is something else than a <noun> or <adjective>.");
+                Debug.LogWarning("After <aan> there is something else than a <noun> or <adjective>.");
                 Debug.Log($"{text}");
                 Debug.Log($"Next Noun: {nextNoun}");
                 Debug.Log($"Next Adjective: {nextAdjective}");

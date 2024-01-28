@@ -131,6 +131,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3739082327610403019, guid: aa842c0aa6f9b71469eb93f23f4633c0, type: 3}
+      propertyPath: musicGlobalSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739082327610403019, guid: aa842c0aa6f9b71469eb93f23f4633c0, type: 3}
+      propertyPath: musicGlobalSounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f340a0ce116b77c4fae7dc882c9478f9, type: 3}
+    - target: {fileID: 3739082327610403019, guid: aa842c0aa6f9b71469eb93f23f4633c0, type: 3}
+      propertyPath: musicGlobalSounds.Array.data[0].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739082327610403019, guid: aa842c0aa6f9b71469eb93f23f4633c0, type: 3}
+      propertyPath: musicGlobalSounds.Array.data[0].name
+      value: MenuMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739082327610403019, guid: aa842c0aa6f9b71469eb93f23f4633c0, type: 3}
+      propertyPath: musicGlobalSounds.Array.data[0].volume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3739082327610403019, guid: aa842c0aa6f9b71469eb93f23f4633c0, type: 3}
+      propertyPath: musicGlobalSounds.Array.data[0].mixerGroup
+      value: 
+      objectReference: {fileID: 8706315808999353272, guid: f81641a471ba1aa44bf3d7ae47da658c, type: 2}
     - target: {fileID: 6630287456239037167, guid: aa842c0aa6f9b71469eb93f23f4633c0, type: 3}
       propertyPath: m_Name
       value: Core

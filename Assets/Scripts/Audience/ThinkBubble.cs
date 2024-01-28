@@ -6,7 +6,7 @@ public class ThinkBubble : MonoBehaviour
     [SerializeField] private GameObject thinkBubbleHolder;
     [SerializeField] private List<AudioClip> closeBubbleSounds;
     private Vector3 thinkBubbleHolderScale;
-    private SpriteRenderer categoryIcon;
+    private SpriteRenderer spriteRenderer;
     private Category nextCategory;
     private AudioSource audioSource;
     private float soundVolumeDiff = 0.3f;
@@ -21,7 +21,7 @@ public class ThinkBubble : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-        categoryIcon = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         thinkBubbleHolderScale = thinkBubbleHolder.transform.localScale;
         thinkBubbleHolder.transform.localScale = Vector3.zero;
     }
@@ -30,10 +30,9 @@ public class ThinkBubble : MonoBehaviour
     {
         if (soundIndex != 0) { PlayCloseBubbleSound(); }
         soundIndex++;
-
         LeanTween.scale(thinkBubbleHolder, Vector3.zero, 0.5f).setEaseInBack().setOnComplete(() =>
         {
-            categoryIcon.sprite = nextCategory.icon;
+            spriteRenderer.sprite = nextCategory.icon;
             ShowCategeory();
         });
     }

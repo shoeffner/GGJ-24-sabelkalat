@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class Viewer : MonoBehaviour
 {
-    [SerializeField, Range(1, 5)] private int minNumberOfCategories;
-    [SerializeField, Range(5, 10)] private int maxNumberOfCategories;
-    [SerializeField, Range(1, 5)] private float minCategoryChangeTime;
-    [SerializeField, Range(5, 10)] private float maxCategoryChangeTime;
-    [SerializeField] private bool changeCategory = true;
+    public bool ChangesCategory { get; set; } = true;
+    [SerializeField, Range(1, 14)] private int minNumberOfCategories;
+    [SerializeField, Range(1, 14)] private int maxNumberOfCategories;
+    [SerializeField, Range(1, 60)] private float minCategoryChangeTime;
+    [SerializeField, Range(1, 60)] private float maxCategoryChangeTime;
     [SerializeField] ThinkBubble thinkBubble;
     public Category CurrentCategory { get; private set; }
 
@@ -33,7 +32,7 @@ public class Viewer : MonoBehaviour
 
     private IEnumerator ChangeCategory()
     {
-        while (changeCategory)
+        while (ChangesCategory)
         {
             CurrentCategory = categories[Random.Range(0, categories.Count)];
             thinkBubble.SetCategory(CurrentCategory);

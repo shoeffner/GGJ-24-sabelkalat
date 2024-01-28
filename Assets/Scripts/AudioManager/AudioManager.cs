@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using Random = System.Random;
+using System.Collections;
 
 public class AudioManager : Singleton<AudioManager>
 {
@@ -49,6 +50,7 @@ public class AudioManager : Singleton<AudioManager>
     private void Start()
     {
         LoadPlayerPrefs();
+        StartCoroutine(FadeIn(FindSoundByName("MenuMusic").source, 0.5f));
     }
 
     private void LoadPlayerPrefs()
@@ -92,6 +94,27 @@ public class AudioManager : Singleton<AudioManager>
     public void PlayRandomSound(List<AudioClip> audioClips)
     {
         if (sfxAudioSource && audioClips.Count > 0) { sfxAudioSource.PlayOneShot(audioClips[random.Next(0, audioClips.Count)]); }
+    }
+
+    public IEnumerator FadeIn(AudioSource audioSource, float time)
+    {
+        audioSource.volume = 0f;
+        audioSource.Play();
+        while (audioSource.volume < 1.0f)
+        {
+            audioSource.volume += Time.deltaTime * time;
+            yield return null;
+        }
+    }
+
+    public IEnumerator FadeOut(AudioSource audioSource, float time)
+    {
+        while (audioSource.volume > 0.0f)
+        {
+            audioSource.volume -= Time.deltaTime * time;
+            yield return null;
+        }
+        audioSource.Stop();
     }
 
 }

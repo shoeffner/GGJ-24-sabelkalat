@@ -17,6 +17,8 @@ public class CardDealer : MonoBehaviour
 
     [Tooltip("Is called when the displayed cards text is changed.")]
     public UnityEvent<CardParser.SetupCard, CardParser.PunchlineCard> onCardsChanged;
+    [Tooltip("Is called when the cards are submitted.")]
+    public UnityEvent<CardParser.SetupCard, CardParser.PunchlineCard> onCardSubmitted;
 
     private CardParser cardParser;
 
@@ -29,13 +31,51 @@ public class CardDealer : MonoBehaviour
     [Tooltip("How many of the cards are for the audience.")]
     public int goodCards = 2;
 
+    [Tooltip("Enable all categories for testing")]
+    public bool useAllCategories = false;
+    public bool useAudienceCategories = false;
 
 
+    void OnEnable()
+    {
+        if (useAllCategories || useAudienceCategories)
+        {
+            GameOrganizer.Instance.OnNextRound += OnNextRound;
+        }
+    }
+
+    void OnDisable()
+    {
+        if (useAllCategories || useAudienceCategories)
+        {
+            GameOrganizer.Instance.OnNextRound -= OnNextRound;
+        }
+    }
 
     public void Start()
     {
         SetupIfNotYet();
-        //RegenerateCards();
+        if (useAllCategories)
+        {
+            RegenerateCards(categoryReader.categories);
+        }
+        else if (useAudienceCategories)
+        {
+            RegenerateCards(GameOrganizer.Instance.audience.GetCurrentAudienceCategories());
+        }
+    }
+
+    private void OnNextRound()
+    {
+        Debug.Log("----- on next round");
+        if (useAllCategories)
+        {
+            RegenerateCards(categoryReader.categories);
+        }
+        else if (useAudienceCategories)
+        {
+            RegenerateCards(GameOrganizer.Instance.audience.GetCurrentAudienceCategories());
+        }
     }
 
     private void Setup()
@@ -129,5 +169,12 @@ public class CardDealer : MonoBehaviour
             currentPunchline = punchlineCards.Count - 1;
         }
         DisplayCurrentCards();
+    }
+
+    public void Submit()
+    {
+        var setup = setupCards[currentSetup];
+        var punchline = punchlineCards[currentPunchline];
+        onCardSubmitted.Invoke(setup, punchline);
     }
 }

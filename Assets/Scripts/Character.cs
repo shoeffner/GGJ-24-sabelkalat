@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,7 +5,7 @@ namespace Sabelkalat
 {
     enum ViewPoint
     {
-        Card, Audience
+        Undefined, Card, Audience, WaitForNextRound
     }
 
     public class Character : MonoBehaviour
@@ -21,11 +20,13 @@ namespace Sabelkalat
         public Card leftCard = null;
         public Card rightCard = null;
 
+        public CardDealer cardDealer = null;
 
         #region Internal State
 
-        private ViewPoint currentViewPoint = ViewPoint.Audience;
+        private ViewPoint currentViewPoint = ViewPoint.Undefined;
         private Card focusedCard = null;
+        private PlayerInput playerInput = null;
 
         #endregion Internal State
 
@@ -39,7 +40,11 @@ namespace Sabelkalat
 
         void Start()
         {
-            ActivateViewPoint(ViewPoint.Audience);
+            GameOrganizer.Instance.OnNextRound += OnNextRound;
+            playerInput = GetComponentInChildren<PlayerInput>();
+            playerInput.enabled = true;
+            focusedCard = leftCard;
+            ActivateViewPoint(ViewPoint.Audience, true);
             EnsureLookAt();
         }
 
@@ -69,7 +74,7 @@ namespace Sabelkalat
         {
             if (currentViewPoint != ViewPoint.Card) return;
             var newFocusedCard = inputValue.Get<float>() < 0 ? leftCard : rightCard;
-            if (focusedCard != null && newFocusedCard != focusedCard)
+            if (newFocusedCard != focusedCard)
             {
                 focusedCard.Unfocus();
             }
@@ -79,22 +84,59 @@ namespace Sabelkalat
 
         void OnConfirmCards()
         {
-
+            Debug.Log("Submitting!");
+            playerInput.enabled = false;
+            ActivateViewPoint(ViewPoint.WaitForNextRound, true);
+            cardDealer.Submit();
         }
 
         void OnToggleCard(InputValue inputValue)
         {
+            Debug.Log("Toggle card");
+            if (currentViewPoint == ViewPoint.Audience || cardDealer == null) return;
+            var previous = inputValue.Get<float>() < 0;
 
+            if (focusedCard == leftCard)
+            {
+                if (previous)
+                {
+                    cardDealer.PreviousSetup();
+                }
+                else
+                {
+                    cardDealer.NextSetup();
+                }
+            }
+            else
+            {
+                if (previous)
+                {
+                    cardDealer.PreviousPunchline();
+                }
+                else
+                {
+                    cardDealer.NextPunchline();
+                }
+            }
         }
 
         #endregion Input Handlers
 
+        #region Callbacks
+
+        public void OnNextRound()
+        {
+            ActivateViewPoint(ViewPoint.Card, true);
+            playerInput.enabled = true;
+        }
+
+        #endregion
+
         #region Behaviour
 
-        void ActivateViewPoint(ViewPoint viewPoint)
+        void ActivateViewPoint(ViewPoint viewPoint, bool force = false)
         {
-            if (currentViewPoint == viewPoint) return;
-            Debug.Log($"Switching to viewpoint {viewPoint}");
+            if (currentViewPoint == viewPoint && !force) return;
             switch (viewPoint)
             {
                 case ViewPoint.Audience:
@@ -104,6 +146,10 @@ namespace Sabelkalat
                 case ViewPoint.Card:
                     leftCard.Show();
                     rightCard.Show();
+                    break;
+                case ViewPoint.WaitForNextRound:
+                    leftCard.Hide();
+                    rightCard.Hide();
                     break;
             }
             currentViewPoint = viewPoint;
@@ -121,6 +167,10 @@ namespace Sabelkalat
             if (rightCard == null)
             {
                 Debug.LogError("No right card assigned!");
+            }
+            if (cardDealer == null)
+            {
+                Debug.LogError("No card dealer assigned!");
             }
         }
 

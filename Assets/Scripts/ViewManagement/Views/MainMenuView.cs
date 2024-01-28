@@ -11,6 +11,7 @@ public class MainMenuView : View
     public override void Initialize()
     {
         _startGameButton.onClick.AddListener(() => {
+            StartCoroutine(AudioManager.Instance.FadeOut(AudioManager.Instance.FindSoundByName("MenuMusic").source, 0.5f));
             GameManager.Instance.LoadGameScene((int)SceneIndexes.GAME_SCENE_ONE);
         });
         _settingsButton.onClick.AddListener(() => ViewManager.Instance.Show<SettingsMenuView>());
