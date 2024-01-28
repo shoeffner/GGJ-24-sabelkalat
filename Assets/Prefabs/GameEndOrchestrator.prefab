@@ -47,11 +47,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curtain: {fileID: 0}
   gameEndAudio: {fileID: 5978323914279762187}
-  gameLoseDelay: 10
+  gameLoseDelay: 14
   loseSounds:
   - {fileID: 8300000, guid: 6e0498d3c28d1de458708468fde77d8b, type: 3}
   - {fileID: 8300000, guid: e4642c574e8498d46b92af0c714ddac9, type: 3}
-  gameWinDelay: 10
+  gameWinDelay: 12
   winSounds:
   - {fileID: 8300000, guid: b1479e70d03babe46be81f6e9f607499, type: 3}
   - {fileID: 8300000, guid: 94f62d4fe389e5f4fb1fff4df63878c0, type: 3}
