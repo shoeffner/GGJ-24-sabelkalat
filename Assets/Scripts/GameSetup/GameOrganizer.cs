@@ -11,7 +11,7 @@ public class GameOrganizer : Singleton<GameOrganizer>
 
     public Audience audience;
     [SerializeField] private GameSetup gameSetup;
-    [SerializeField] private float timeBetweenRounds = 2f;
+    [SerializeField] private float timeBetweenRounds = 4f;
     [SerializeField] private float fadeInTime = 0.5f;
     [SerializeField] private float fadeOutTime = 0.5f;
 
@@ -21,21 +21,16 @@ public class GameOrganizer : Singleton<GameOrganizer>
     [SerializeField] private AudioSource moreIntenseTrack;
     [SerializeField] private AudioSource superIntenseTrack;
 
-    [Header("SFX")]
-    [SerializeField] private List<AudioClip> goodJokeSounds;
-    [SerializeField] private List<AudioClip> deadJokeSounds;
     private int currentIntensity = 0;
     private int deadJokeSeqCounter = 0;
     private int goodJokeSeqCounter = 0;
 
     private int currentScore = 0;
     private int currentRoundIndex = 0;
-    private AudioSource sfxAudioSource;
 
 
     private void Start()
     {
-        sfxAudioSource = GetComponent<AudioSource>();
         audience.SetNewViewers(gameSetup.gameRounds[currentRoundIndex].viewers);
         basicTrack.Play();
     }
@@ -49,7 +44,6 @@ public class GameOrganizer : Singleton<GameOrganizer>
         }
         currentScore = Mathf.Clamp(currentScore + score, gameSetup.lowerScoreLimit, gameSetup.upperScoreLimit);
         OnScoreChanged?.Invoke(score);
-        PlayReactionSound(score);
 
         CheckForTrackIntensity(score);
         StartCoroutine(NextRoundTrigger());
@@ -73,12 +67,6 @@ public class GameOrganizer : Singleton<GameOrganizer>
         }
         OnNextRound?.Invoke();
         audience.SetNewViewers(gameSetup.gameRounds[currentRoundIndex].viewers);
-    }
-    private void PlayReactionSound(int score)
-    {
-        var reactionSound = score > 0 ? goodJokeSounds[Random.Range(0, goodJokeSounds.Count)] : deadJokeSounds[Random.Range(0, deadJokeSounds.Count)];
-        sfxAudioSource.clip = reactionSound;
-        sfxAudioSource.PlayDelayed(0.5f);
     }
 
     // Every 2 dead jokes in a row, the track gets more intense
