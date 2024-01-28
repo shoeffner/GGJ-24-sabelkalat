@@ -6,7 +6,7 @@ It was developed for the [Global Game Jam 2024](https://globalgamejam.org/games/
 
 Use the arrow keys (or WASD) to focus your cards and swap them, tell the joke with `space` and swap the view with `tab`.
 
-![A game still showing a horror audience demanding jokes a comedian cannot fulfill.](Assets/Screenshots/audienceview_small.png)
+![A game still showing a horror audience demanding jokes a comedian cannot fulfill.](Assets/Screenshots/audienceview_1.png)
 
 
 ## Credits
@@ -32,6 +32,14 @@ Use the arrow keys (or WASD) to focus your cards and swap them, tell the joke wi
 - bitowl
 - Tobias Lauxmann (YoghurtDrop)
 - Sebastian Höffner (shoeffner)
+
+
+### Insights
+
+![Over 160.000 combination of jokes.](Assets/Screenshots/jokeExample_1.png)
+![Over 160.000 combination of jokes.](Assets/Screenshots/jokeExample_2.png)
+![Over 160.000 combination of jokes.](Assets/Screenshots/jokeExample_3.png)
+![Over 160.000 combination of jokes.](Assets/Screenshots/jokeExample_4.png)
 
 
 ## License
