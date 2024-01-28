@@ -133,6 +133,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 73840787237537140, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 284604450769486685, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 351169033952786198, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
@@ -171,9 +175,13 @@ PrefabInstance:
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0.9607843
       objectReference: {fileID: 0}
+    - target: {fileID: 1615202400388423498, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1811656568212292271, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2146969219574584373, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_AnchorMax.x
@@ -273,6 +281,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2864238530346376371, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3565249045789562982, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3949778497823130514, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
@@ -397,6 +409,12 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 61.7
       objectReference: {fileID: 0}
+    - target: {fileID: 8624187659795887036, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
+      propertyPath: m_text
+      value: "<b>Game Design</b>\nSam Matsa (einfuehlsam)\nEtienne Theurer (GranatenGecko)\n\n<b>Art</b>\nKatja
+        Kollischon\nAres Gruber\n\n<b>Audio</b>\nMagnus Reichel\n\n<b>Code</b>\nbitowl\nTobias
+        Lauxmann (YoghurtDrop)\nSebastian H\xF6ffner (shoeffner)"
+      objectReference: {fileID: 0}
     - target: {fileID: 8626328958785099505, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -411,15 +429,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902212747903923858, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8902212747903923858, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8902212747903923858, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9043901818905715698, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_AnchorMax.x
