@@ -51,5 +51,9 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "sabelkalat.sln"
+    "dotnet.defaultSolution": "sabelkalat.sln",
+    "[html]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": null
+    }
 }
