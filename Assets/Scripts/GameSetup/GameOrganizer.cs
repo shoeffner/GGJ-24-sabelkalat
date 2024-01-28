@@ -63,14 +63,14 @@ public class GameOrganizer : Singleton<GameOrganizer>
     {
         Debug.Log("NextRound");
         currentRoundIndex++;
-        if (currentRoundIndex >= gameSetup.gameRounds.Count || currentIntensity == 4)
-        {
-            OnGameWin?.Invoke();
-            return;
-        }
-        if (currentScore < -10)
+        if (currentIntensity >= 4)
         {
             OnGameLose?.Invoke();
+            return;
+        }
+        if (currentRoundIndex >= gameSetup.gameRounds.Count)
+        {
+            OnGameWin?.Invoke();
             return;
         }
         OnNextRound?.Invoke();
