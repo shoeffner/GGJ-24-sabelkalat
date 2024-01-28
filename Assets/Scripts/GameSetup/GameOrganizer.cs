@@ -12,6 +12,7 @@ public class GameOrganizer : Singleton<GameOrganizer>
     public Audience audience;
     [SerializeField] private GameSetup gameSetup;
     [SerializeField] private float timeBetweenRounds = 4f;
+    [SerializeField] private float switchIntensityThreshhold = 1;
     [SerializeField] private float fadeInTime = 0.5f;
     [SerializeField] private float fadeOutTime = 0.5f;
 
@@ -60,7 +61,7 @@ public class GameOrganizer : Singleton<GameOrganizer>
     public void NextRound()
     {
         currentRoundIndex++;
-        if (currentRoundIndex >= gameSetup.gameRounds.Count || currentScore < -10)
+        if (currentRoundIndex >= gameSetup.gameRounds.Count || currentIntensity == 4)
         {
             OnGameOver?.Invoke();
             return;
@@ -84,10 +85,10 @@ public class GameOrganizer : Singleton<GameOrganizer>
             goodJokeSeqCounter = 0;
         }
 
-        if (deadJokeSeqCounter >= 2)
+        if (deadJokeSeqCounter >= switchIntensityThreshhold)
         {
             deadJokeSeqCounter = 0;
-            currentIntensity = Mathf.Clamp(++currentIntensity, 0, 3);
+            currentIntensity = Mathf.Clamp(++currentIntensity, 0, 4);
             if (currentIntensity == 1)
             {
                 Debug.Log("intense Track");
@@ -104,10 +105,10 @@ public class GameOrganizer : Singleton<GameOrganizer>
                 StartCoroutine(AudioManager.Instance.FadeIn(superIntenseTrack, fadeInTime));
             }
         }
-        else if (goodJokeSeqCounter >= 2)
+        else if (goodJokeSeqCounter >= switchIntensityThreshhold)
         {
             goodJokeSeqCounter = 0;
-            currentIntensity = Mathf.Clamp(--currentIntensity, 0, 3);
+            currentIntensity = Mathf.Clamp(--currentIntensity, 0, 4);
             if (currentIntensity == 0)
             {
                 Debug.Log("basic Track");

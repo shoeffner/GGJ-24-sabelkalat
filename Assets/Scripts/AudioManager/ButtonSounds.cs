@@ -20,7 +20,7 @@ public class ButtonSound : MonoBehaviour
     {
         EventTrigger.Entry eventtype = new EventTrigger.Entry();
         eventtype.eventID = EventTriggerType.PointerEnter;
-        eventtype.callback.AddListener((eventData) => audioSource.PlayOneShot(hoverSound));
+        if(hoverSound != null) eventtype.callback.AddListener((eventData) => audioSource.PlayOneShot(hoverSound));
 
         foreach (Button b in FindObjectsOfType<Button>(true))
         {
