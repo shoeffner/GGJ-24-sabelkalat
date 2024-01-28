@@ -61,6 +61,7 @@ public class GameOrganizer : Singleton<GameOrganizer>
 
     public void NextRound()
     {
+        Debug.Log("NextRound");
         currentRoundIndex++;
         if (currentRoundIndex >= gameSetup.gameRounds.Count || currentIntensity == 4)
         {
@@ -131,5 +132,27 @@ public class GameOrganizer : Singleton<GameOrganizer>
                 StartCoroutine(AudioManager.Instance.FadeOut(superIntenseTrack, fadeOutTime));
             }
         }
+    }
+
+    public IEnumerator FadeOutMusic()
+    {
+        StartCoroutine(AudioManager.Instance.FadeOut(basicTrack, fadeOutTime));
+        StartCoroutine(AudioManager.Instance.FadeOut(intenseTrack, fadeOutTime));
+        StartCoroutine(AudioManager.Instance.FadeOut(moreIntenseTrack, fadeOutTime));
+        StartCoroutine(AudioManager.Instance.FadeOut(superIntenseTrack, fadeOutTime));
+        Debug.Log("Fading out");
+        yield return new WaitForSeconds(fadeOutTime);
+    }
+
+    public void DebugPrepareGameWin()
+    {
+        currentRoundIndex = gameSetup.gameRounds.Count - 1;
+        Debug.Log("prepared for game win");
+    }
+
+    public void DebugPrepareGameLose()
+    {
+        currentScore = -1000;
+        Debug.Log("prepared for game win");
     }
 }

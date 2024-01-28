@@ -23,12 +23,15 @@ public class GameOrganizerEditor : Editor
         }
         if (GUILayout.Button("Game Win"))
         {
-            test.AddScore(1000);
-            test.OnGameWin.Invoke();
+            //test.AddScore(1000);
+            //test.OnGameWin.Invoke();
+            test.DebugPrepareGameWin();
         }
         if (GUILayout.Button("Game Lose"))
         {
-            test.AddScore(-10000);
+            //test.AddScore(-10000);
+            //test.OnGameLose();
+            test.DebugPrepareGameLose();
         }
         DrawDefaultInspector();
     }
