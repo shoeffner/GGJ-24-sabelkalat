@@ -61,13 +61,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.9108889, y: 0.92284036, z: 1, w: 0.07111483}
+    m_Value: {x: 0.954541, y: 0.93684095, z: 1, w: 0.17909423}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9795044, z: 0.91801715, w: 0.098073654}
+    m_Value: {x: 0.9219475, y: 0.8825958, z: 1, w: 0.098073654}
   highlights:
     m_OverrideState: 0
-    m_Value: {x: 1, y: 1, z: 1, w: -1}
+    m_Value: {x: 0.96497387, y: 1, z: 0.9776471, w: -0.4755857}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
@@ -137,8 +137,8 @@ MonoBehaviour:
   - {fileID: -7136727770116057015}
   - {fileID: 5406125404450636636}
   - {fileID: 4289083967567207100}
-  - {fileID: 8048909649487212013}
   - {fileID: -7138507496113227481}
+  - {fileID: 8048909649487212013}
 --- !u!114 &4289083967567207100
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -327,7 +327,7 @@ MonoBehaviour:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.17258883
+          value: 0.13943666
           inSlope: 3.773707
           outSlope: 3.773707
           tangentMode: 0
@@ -378,14 +378,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   lift:
-    m_OverrideState: 1
-    m_Value: {x: 0.96160936, y: 0.99718523, z: 1, w: 0}
+    m_OverrideState: 0
+    m_Value: {x: 0.96160936, y: 0.99718523, z: 1, w: -0.056360055}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 0.9126047, y: 0.91642016, z: 1, w: 0}
+    m_Value: {x: 0.9126047, y: 0.91642016, z: 1, w: 0.006262135}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 0.9268627, y: 0.9391748, z: 1, w: 0.24262835}
+    m_Value: {x: 0.9268627, y: 0.9391748, z: 1, w: 0.07354831}
 --- !u!114 &8048909649487212013
 MonoBehaviour:
   m_ObjectHideFlags: 3
