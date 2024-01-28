@@ -30,7 +30,7 @@ public class CrowdReactionDisplay : MonoBehaviour
 
     void OnDisable()
     {
-        GameOrganizer.Instance.OnScoreChanged -= OnScoreChanged;
+        //GameOrganizer.Instance.OnScoreChanged -= OnScoreChanged;
     }
 
     private void OnScoreChanged(int scoreDiff)

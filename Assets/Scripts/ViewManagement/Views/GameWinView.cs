@@ -9,12 +9,12 @@ public class GameWinView : View
     [NotNull]
     public Button restartButton;
     [NotNull]
-    public Button quitButton;
+    public Button mainMenuButton;
 
     public override void Initialize()
     {
         restartButton.onClick.AddListener(RestartGame);
-        quitButton.onClick.AddListener(QuitGame);
+        mainMenuButton.onClick.AddListener(MainMenu);
     }
 
     private void RestartGame()
@@ -27,6 +27,11 @@ public class GameWinView : View
                 SceneManager.LoadSceneAsync((int)SceneIndexes.GAME_SCENE_ONE, LoadSceneMode.Additive);
             };
         });
+    }
+
+    private void MainMenu()
+    {
+        GameManager.Instance.QuitActiveGame();
     }
 
     private void QuitGame()
