@@ -512,7 +512,7 @@ PrefabInstance:
     - target: {fileID: 8624187659795887036, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
       propertyPath: m_text
       value: "<b>Game Design</b>\nSam Matsa (einfuehlsam)\nEtienne Theurer (GranatenGecko)\n\n<b>Art</b>\nKatja
-        Kollischon\nAres Gruber\n\n<b>Audio</b>\nMagnus Reichel\n\n<b>Code</b>\nbitowl\nTobias
+        Kollischon\nAres Gruber\n\n<b>Music & Audio</b>\nMagnus Reichel\n\n<b>Code</b>\nbitowl\nTobias
         Lauxmann (YoghurtDrop)\nSebastian H\xF6ffner (shoeffner)"
       objectReference: {fileID: 0}
     - target: {fileID: 8626328958785099505, guid: 70c1135bd08d70e48a4fcddae830b445, type: 3}
