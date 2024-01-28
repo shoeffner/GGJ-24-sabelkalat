@@ -117,7 +117,7 @@
                     "name": "teacher",
                     "sex": "f",
                     "aan": "a",
-                    "adjective": "lovecraftian",
+                    "adjective": "way too hot",
                     "aanAdjective": "a"
                    },
                    {
@@ -131,7 +131,7 @@
                     "name": "accountant",
                     "sex": "m",
                     "aan": "an",
-                    "adjective": "suspicious",
+                    "adjective": "suspiciously looking",
                     "aanAdjective": "a"
                    }
             ]
@@ -178,7 +178,7 @@
                     "name": "trimmer",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "embarrassing",
+                    "adjective": "embarrassingly small",
                     "aanAdjective": "an"
                    },
                    {
@@ -192,14 +192,14 @@
                     "name": "radio",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "speechless",
+                    "adjective": "so called",
                     "aanAdjective": "a"
                    },
                    {
                     "name": "vacuum cleaner",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "dedicated",
+                    "adjective": "truly dedicated",
                     "aanAdjective": "a"
                    }
             ]
@@ -246,22 +246,22 @@
                     "name": "cough syrup",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "salty",
+                    "adjective": "sweet and salty",
                     "aanAdjective": "a"
                    },
                    {
                     "name": "placebo",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "intense",
+                    "adjective": "very intense",
                     "aanAdjective": "an"
                    },
                    {
                     "name": "aspirin",
                     "sex": "n",
                     "aan": "an",
-                    "adjective": "impure",
-                    "aanAdjective": "an"
+                    "adjective": "huge dose of",
+                    "aanAdjective": "a"
                    },
                    {
                     "name": "laxative",
@@ -328,14 +328,14 @@
                     "name": "bubble tea",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "condensed",
+                    "adjective": "kind of condensed",
                     "aanAdjective": "a"
                    },
                    {
                     "name": "cheese",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "obnoxious",
+                    "adjective": "obnoxiously heavy piece of",
                     "aanAdjective": "an"
                    }
             ]
@@ -375,21 +375,21 @@
                     "name": "pickaxe",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "hyperactive",
+                    "adjective": "not as pointy",
                     "aanAdjective": "a"
                    },
                    {
                     "name": "lawnmower",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "shy",
+                    "adjective": "murderous",
                     "aanAdjective": "a"
                    },
                    {
                     "name": "shovel",
                     "sex": "n",
                     "aan": "a",
-                    "adjective": "fancy",
+                    "adjective": "fancy schmancy",
                     "aanAdjective": "a"
                    },
                    {
