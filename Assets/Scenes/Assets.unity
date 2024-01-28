@@ -476,6 +476,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 463967349463344790, guid: 8a3470413a5984e5c9b529a7388d5bb3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 463967349463344790, guid: 8a3470413a5984e5c9b529a7388d5bb3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.714
+      objectReference: {fileID: 0}
+    - target: {fileID: 463967349463344790, guid: 8a3470413a5984e5c9b529a7388d5bb3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -66.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 463967349463344790, guid: 8a3470413a5984e5c9b529a7388d5bb3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8260558
+      objectReference: {fileID: 0}
+    - target: {fileID: 463967349463344790, guid: 8a3470413a5984e5c9b529a7388d5bb3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1.08371056e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 463967349463344790, guid: 8a3470413a5984e5c9b529a7388d5bb3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5635884
+      objectReference: {fileID: 0}
+    - target: {fileID: 463967349463344790, guid: 8a3470413a5984e5c9b529a7388d5bb3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -5.4752392e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 463967349463344790, guid: 8a3470413a5984e5c9b529a7388d5bb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 68.609
+      objectReference: {fileID: 0}
     - target: {fileID: 552664150761220817, guid: 8a3470413a5984e5c9b529a7388d5bb3, type: 3}
       propertyPath: m_Name
       value: Theater
