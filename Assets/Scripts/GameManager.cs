@@ -30,6 +30,7 @@ public class GameManager : Singleton<GameManager>
         {
             activeGame = true;
             SceneManager.SetActiveScene(scene);
+            StartCoroutine(AudioManager.Instance.FadeOut(AudioManager.Instance.FindSoundByName("MenuMusic").source, 0.5f));
 
             if (SceneManager.GetSceneByBuildIndex((int)SceneIndexes.UI_OVERLAY).isLoaded)
             {
@@ -41,8 +42,10 @@ public class GameManager : Singleton<GameManager>
         {
             ViewManager.Instance.SetStartingView(ViewManager.Instance.GetView<GameOverlayView>());
             ViewManager.Instance.SetCameraState(false);
+            StartCoroutine(AudioManager.Instance.FadeOut(AudioManager.Instance.FindSoundByName("MenuMusic").source, 0.5f));
         }
-        if(transform.parent == null) { SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetSceneByBuildIndex((int)SceneIndexes.MANAGER)); }
+
+        if (transform.parent == null) { SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetSceneByBuildIndex((int)SceneIndexes.MANAGER)); }
     }
 
     public void LoadGameScene(int sceneIndex)
@@ -64,6 +67,7 @@ public class GameManager : Singleton<GameManager>
             ViewManager.Instance.Show<MainMenuView>();
             ViewManager.Instance.SetCameraState(true);
             activeGame = false;
+            StartCoroutine(AudioManager.Instance.FadeIn(AudioManager.Instance.FindSoundByName("MenuMusic").source, 0.5f));
         });
     }
 

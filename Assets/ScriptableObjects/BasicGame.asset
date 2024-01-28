@@ -14,24 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameRounds:
   - viewers:
-    - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
     correctAnswersScore: 1
-    wrongAnswersScore: -0.5
+    wrongAnswersScore: -1
   - viewers:
-    - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
     correctAnswersScore: 1
-    wrongAnswersScore: -0.5
+    wrongAnswersScore: -1
   - viewers:
-    - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
     correctAnswersScore: 1
-    wrongAnswersScore: -0.5
+    wrongAnswersScore: -1
   - viewers:
-    - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
     correctAnswersScore: 1
-    wrongAnswersScore: -0.5
+    wrongAnswersScore: -1
   - viewers:
-    - {fileID: 7951972768371675436, guid: 83348ea25c4a8d145bf8477115e953aa, type: 3}
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
     correctAnswersScore: 1
-    wrongAnswersScore: -0.5
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 6151265580964193956, guid: 2dc95b9bc0c017041b415b0ed5d8df22, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
   upperScoreLimit: 20
   lowerScoreLimit: -20
