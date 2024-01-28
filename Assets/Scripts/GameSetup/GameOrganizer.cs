@@ -6,7 +6,8 @@ using UnityEngine.Events;
 public class GameOrganizer : Singleton<GameOrganizer>
 {
     public UnityAction OnNextRound;
-    public UnityAction OnGameOver;
+    public UnityAction OnGameWin;
+    public UnityAction OnGameLose;
     public UnityAction<int> OnScoreChanged;
 
     public Audience audience;
@@ -60,9 +61,14 @@ public class GameOrganizer : Singleton<GameOrganizer>
     public void NextRound()
     {
         currentRoundIndex++;
-        if (currentRoundIndex >= gameSetup.gameRounds.Count || currentScore < -10)
+        if (currentRoundIndex >= gameSetup.gameRounds.Count)
         {
-            OnGameOver?.Invoke();
+            OnGameWin?.Invoke();
+            return;
+        }
+        if (currentScore < -10)
+        {
+            OnGameLose?.Invoke();
             return;
         }
         OnNextRound?.Invoke();

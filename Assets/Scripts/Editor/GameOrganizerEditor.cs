@@ -21,6 +21,15 @@ public class GameOrganizerEditor : Editor
         {
             test.NextRound();
         }
+        if (GUILayout.Button("Game Win"))
+        {
+            test.AddScore(1000);
+            test.OnGameWin.Invoke();
+        }
+        if (GUILayout.Button("Game Lose"))
+        {
+            test.AddScore(-10000);
+        }
         DrawDefaultInspector();
     }
 }
