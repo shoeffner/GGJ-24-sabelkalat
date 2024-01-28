@@ -30,13 +30,18 @@ public class GameManager : Singleton<GameManager>
         {
             activeGame = true;
             SceneManager.SetActiveScene(scene);
+
+            if (SceneManager.GetSceneByBuildIndex((int)SceneIndexes.UI_OVERLAY).isLoaded)
+            {
+                ViewManager.Instance.SetCameraState(false);
+            }
         }
+        
         if (scene.buildIndex == (int)SceneIndexes.UI_OVERLAY && !noGameScenes.Contains(SceneManager.GetActiveScene().buildIndex))
         {
             ViewManager.Instance.SetStartingView(ViewManager.Instance.GetView<GameOverlayView>());
             ViewManager.Instance.SetCameraState(false);
         }
-
         if(transform.parent == null) { SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetSceneByBuildIndex((int)SceneIndexes.MANAGER)); }
     }
 
