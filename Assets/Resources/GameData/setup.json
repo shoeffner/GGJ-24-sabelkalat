@@ -25,7 +25,7 @@
             "text": "My relationship to my parents <noun> is very fun, relaxed and easy-going"
            },
            {
-            "text": "An old man made a bad joke about <aan> <noun> in a tv show"
+            "text": "Saw a bad joke about <aan> <noun> in a tv show once"
            },
            {
             "text": "Questioning the moral of <aan> <adjective> <noun> is weird"
@@ -52,16 +52,88 @@
             "text": "I never thought about moving to sweden with my <noun>"
            },
            {
-            "text": "<aan> <noun> is the cause of — and solution to — all of life's problem "
+            "text": "<aan> <adjective> <noun> is the cause of — and solution to — all of life's problem "
            },
            {
             "text": "Throwing <aan> <adjective> <noun> on a minefield is my secret hobby"
            },
            {
-            "text": "Selling <aan> <adjective> <noun> before 7 AM is like comiting tax fraud on a Sunday morning"
+            "text": "Selling <aan> <adjective> <noun> before 7 AM is like commiting tax fraud on a Sunday morning"
            },
            {
-            "text": "I am the owner of <noun>.com"
+            "text": "I am the owner of www.<noun>.com"
+           },
+           {
+            "text": "I should buy <aan> <noun> and add it to my collection"
+           },
+           {
+            "text": "My latest idea is to make a game about the life of <aan> <adjective> <noun>"
+           },
+           {
+            "text": "Instead of using a second monitor I usually just put my <adjective> <noun> on my desk"
+           },
+           {
+            "text": "Sugar, baking powder, salt and <aan> <adjective> <noun> are the perfect ingredients for a caotic afternoon"
+           },
+           {
+            "text": "I have one goal in life: To be able to afford <aan> <noun>"
+           },
+           {
+            "text": "Additionally to my caffeine addiction I'm also addicted to my sisters <noun>"
+           },
+           {
+            "text": "During my first internship I was supervised by <aan> <noun>"
+           },
+           {
+            "text": "Recently I hit <aan> <noun> on the head with a soda can. Thankfully it was a soft drink"
+           },
+           {
+            "text": "Usually I walk my <noun> with empathy and care"
+           },
+           {
+            "text": "Not once have I seen <aan> <adjective> <noun> at my local barber shop"
+           },
+           {
+            "text": "I'm an advocate of pizza remaining <noun>-free"
+           },
+           {
+            "text": "A sunny day is a good day to stick <aan> <adjective> <noun> on an intercontinental missile"
+           },
+           {
+            "text": "Dreamworks has announced a new film. It's called: \"The adventure of <aan> <adjective> <noun>\""
+           },
+           {
+            "text": "I used to have sex with my professor and my professors <noun>"
+           },
+           {
+            "text": "For the most part I love touching my <noun> with my pinkie toe"
+           },
+           {
+            "text": "You there! In the front row! Can you see my <adjective> <noun>?"
+           },
+           {
+            "text": "Don't confuse the love to my <noun> with a lack of confidence"
+           },
+           {
+            "text": "<aan> <noun> in a mixer might not result in a good cocktail, but <pronounObjective> leftovers could be a good mixture."
+           },
+           {
+            "text": "What's worse than sex with a human being? Sex with <aan> <noun>"
+           },
+           {
+            "text": "Some people love to take their <noun> and shove it up their bun"
+           },
+           {
+            "text": "Did you know? <aan> <adjective> <noun> is running for president"
+           },
+           {
+            "text": "I woke up yesterday thinking \"How much of my <noun>\" can I fit?"
+           },
+           {
+            "text": "I'm a connoisseur when it comes to hitting myself with my <noun>"
+           },
+           {
+            "text": "I just love the realization of beeing a <adjective> <noun>"
            }
     ]
 }

@@ -25,19 +25,22 @@ public class CardPrinter
     public static string GetSetupText(CardParser.SetupCard setupCard)
     {
         var text = ReplaceNounPlaceholders(setupCard.text, setupCard.noun);
-
-        if (!string.IsNullOrEmpty(text))
-        {
-            // Make the first letter uppercase
-            text = char.ToUpper(text[0]) + text.Substring(1);
-        }
-
-        return text;
+        return MakeFirstCharUpperCase(text);
     }
 
     public static string GetPunchlineText(CardParser.SetupCard setupCard, CardParser.PunchlineCard punchlineCard)
     {
-        return ReplaceNounPlaceholders(punchlineCard.text, setupCard.noun);
+        var text =  ReplaceNounPlaceholders(punchlineCard.text, setupCard.noun);
+        return MakeFirstCharUpperCase(text);
+    }
+
+    private static string MakeFirstCharUpperCase(string text){
+        if (!string.IsNullOrEmpty(text))
+        {
+            text = char.ToUpper(text[0]) + text.Substring(1);
+            return text;
+        }
+        return "";
     }
 
     private static string ReplaceNounPlaceholders(string text, CardParser.Noun noun)

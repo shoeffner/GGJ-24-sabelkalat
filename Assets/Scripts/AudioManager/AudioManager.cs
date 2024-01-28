@@ -50,6 +50,7 @@ public class AudioManager : Singleton<AudioManager>
     private void Start()
     {
         LoadPlayerPrefs();
+        StartCoroutine(FadeIn(FindSoundByName("MenuMusic").source, 0.5f));
     }
 
     private void LoadPlayerPrefs()
