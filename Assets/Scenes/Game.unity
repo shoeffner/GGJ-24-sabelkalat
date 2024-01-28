@@ -637,16 +637,8 @@ PrefabInstance:
       value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 9033305439130057871, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9033305439130057871, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9033305439130057871, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0
+      propertyPath: m_fontSize
+      value: 17.4
       objectReference: {fileID: 0}
     - target: {fileID: 9033305439130057871, guid: 36c899e2ad91f42d9b886203cafa1900, type: 3}
       propertyPath: m_fontColor32.rgba
