@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 1287686792993905204}
   - component: {fileID: 3294868590005726340}
   - component: {fileID: 8618177198654477053}
+  - component: {fileID: 856046161297560699}
   m_Layer: 0
   m_Name: RGBCamera
   m_TagString: Untagged
@@ -174,6 +175,22 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &856046161297560699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544134749521739347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b622c1eef4c0c0f42ba287f4c3a79870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderTexture: {fileID: 8400000, guid: 83a10293a8b9c447ca998eec18f6a580, type: 2}
+  cam: {fileID: 3294868590005726340}
+  mat: {fileID: 0}
+  rawImage: {fileID: 612745399737961675}
 --- !u!1 &4228798279739605066
 GameObject:
   m_ObjectHideFlags: 0
