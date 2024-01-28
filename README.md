@@ -21,3 +21,9 @@ Magnus Reichel
 bitowl
 Tobias Lauxmann (YoghurtDrop)
 Sebastian Höffner (shoeffner)
+
+
+## License
+
+The files `lostWish-*.ogg` are not covered under the CC-BY-NC-SA-4.0, instead they are licensed for this project by Magnus Reichel.
+If you want to use them in your (potentially commercial) products, you can license the files directly at [Magnus' website](https://www.magnusreichel.de/product/fifth-piano/).
