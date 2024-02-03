@@ -49,8 +49,10 @@ public class GameEndOrchestrator : MonoBehaviour
         curtain.Close();
         yield return new WaitForSeconds(curtain.moveDuration);
         Debug.Log("Showing menu");
-
-        ViewManager.Instance.Show<GameWinView>();
+        Debug.Log("Score: " + GameOrganizer.Instance.GetCurrentScore());
+        ViewManager.Instance.GetView<GameOverView>().SetScoreText(GameOrganizer.Instance.GetCurrentScore());
+        ViewManager.Instance.GetView<GameOverView>().SetResultText(true);
+        ViewManager.Instance.Show<GameOverView>();
     }
 
     private void OnGameLose()
@@ -72,11 +74,12 @@ public class GameEndOrchestrator : MonoBehaviour
 
         yield return new WaitForSeconds(gameLoseDelay);
         // TODO Fade to black
+        curtain.Close();
+        yield return new WaitForSeconds(curtain.moveDuration);
         Debug.Log("Showing menu");
-        TransitionManager.Instance.TransitionScenes(() =>
-        {
-            ViewManager.Instance.Show<GameLoseView>();
-        });
+        ViewManager.Instance.GetView<GameOverView>().SetScoreText(GameOrganizer.Instance.GetCurrentScore());
+        ViewManager.Instance.GetView<GameOverView>().SetResultText(false);
+        ViewManager.Instance.Show<GameOverView>();
 
     }
 }

@@ -18,7 +18,7 @@ public class PauseMenuView : View
         _settingsButton.onClick.AddListener(() => ViewManager.Instance.Show<SettingsMenuView>());
         _mainMenuButton.onClick.AddListener(() =>
         {
-            GameManager.Instance.QuitActiveGame();
+            GameManager.Instance.QuitActiveGame(ViewManager.Instance.GetView<MainMenuView>());
             Time.timeScale = 1;
         });
         _quitButton.onClick.AddListener(() => ViewManager.Instance.Show<ConfirmExitMenuView>());

@@ -31,8 +31,10 @@ public class GameOrganizer : Singleton<GameOrganizer>
     private int currentRoundIndex = 0;
 
 
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
+        gameSetup = GameManager.Instance.GetCurrentGameSetup();
         audience.SetNewViewers(gameSetup.gameRounds[currentRoundIndex].viewers);
         basicTrack.Play();
     }
@@ -152,7 +154,7 @@ public class GameOrganizer : Singleton<GameOrganizer>
 
     public void DebugPrepareGameLose()
     {
-        currentScore = -1000;
+        currentIntensity = 5;
         Debug.Log("prepared for game win");
     }
 }

@@ -1,9 +1,16 @@
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System;
+using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    [SerializeField] private GameSetup easy;
+    [SerializeField] private GameSetup medium;
+    [SerializeField] private GameSetup deadSerious;
+
     public static bool activeGame { get; set; }
+    private GameSetup currentGameSetup;
 
     protected override void Awake()
     {
@@ -57,18 +64,37 @@ public class GameManager : Singleton<GameManager>
         });
     }
 
-    public void QuitActiveGame()
+    public void QuitActiveGame(View showView)
     {
         TransitionManager.Instance.TransitionScenes(() =>
         {
             Scene gameScene = SceneManager.GetActiveScene();
             SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex((int)SceneIndexes.MANAGER));
             SceneManager.UnloadSceneAsync(gameScene);
-            ViewManager.Instance.Show<MainMenuView>();
+            ViewManager.Instance.Show(showView);
             ViewManager.Instance.SetCameraState(true);
             activeGame = false;
             StartCoroutine(AudioManager.Instance.FadeIn(AudioManager.Instance.FindSoundByName("MenuMusic").source, 0.5f));
         });
+    }
+
+    public void SetGameSetupEasy()
+    {
+        currentGameSetup = easy;
+    }
+
+    public void SetGameSetupMedium()
+    {
+        currentGameSetup = medium;
+    }
+    public void SetGameSetupDeadSerious()
+    {
+        currentGameSetup = deadSerious;
+    }
+
+    public GameSetup GetCurrentGameSetup()
+    {
+        return currentGameSetup == null ? easy : currentGameSetup;
     }
 
 }

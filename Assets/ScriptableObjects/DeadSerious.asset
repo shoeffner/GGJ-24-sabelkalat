@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed895715bd1881541bb8ed0f2ac7d867, type: 3}
+  m_Name: DeadSerious
+  m_EditorClassIdentifier: 
+  gameRounds:
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    - {fileID: 1078626949857301553, guid: 984c8ec670d65014b884a40cc473e632, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  - viewers:
+    - {fileID: 5822404858959252428, guid: 878a6d7bb40627247a4adc088acb76dd, type: 3}
+    correctAnswersScore: 1
+    wrongAnswersScore: -1
+  upperScoreLimit: 20
+  lowerScoreLimit: -20
