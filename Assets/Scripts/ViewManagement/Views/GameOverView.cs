@@ -24,7 +24,7 @@ public class GameOverView : View
 
     public void SetResultText(bool win)
     {
-        resultText.text = win ? "You survived" : "You died, because your jokes were too bad!";
+        resultText.text = win ? "You survived" : "Your jokes were too bad!";
     }
 
     public void SetScoreText(int score)
@@ -40,7 +40,7 @@ public class GameOverView : View
         }
         else if (score < 4)
         {
-            scoreResultText.text = "Maybe you are funny, but your jokes are not that good!";
+            scoreResultText.text = "Maybe you are a funny person, but your jokes are not that good!";
         }
         else if (score < 7)
         {
